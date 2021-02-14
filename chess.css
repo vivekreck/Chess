@@ -1,0 +1,229 @@
+#img1{
+    height: 50px;
+    width: 30px;
+    margin-right: 5%;
+}
+
+#img2{
+    margin-top: 12%;
+    margin-left: 12%;
+    width: 50%;
+}
+
+#img3{
+    margin-top: 28%;
+    margin-left: 10%;
+    height: 80%;
+}
+
+#mst{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+#name{
+    display: inline-block;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+
+#link1, #link2, #link3{
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}
+
+#homebg{
+    background-image: url("./homebg.png");
+    height: 625px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#nav2{
+    /* display: inline-block; */
+    font-size: 2px;
+}
+
+#contain{
+    margin-top: 76px;
+    border: solid black;
+}
+
+#col2, #col21, #col22, #col23{
+    height: 540px;
+}
+
+
+#menu{
+    margin-top: 80px;
+    margin-left: 20px;
+    width: 200px;
+}
+
+#menuicon{
+    background-color: black;
+}
+
+#myMenu{
+    background-color: black;
+}
+
+#new{
+    margin-top: 70px;
+    margin-left: 2px;
+}
+
+#turn{
+    margin-top: 30px;
+    margin-left: 2px;
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: solid yellowgreen;
+    width: 100px;
+}
+
+#tp{
+    margin-left: 25%;
+    font-size: 250%;
+    color: yellow;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+#p1{
+    margin-top: 20px;
+    margin-left: 2px;
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: solid yellowgreen;
+    width: 200px;
+}
+
+#p2{
+    margin-top: 10px;
+    margin-left: 2px;
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: solid yellowgreen;
+    width: 200px;
+}
+
+.rest1{
+    font-size: 150%;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+} 
+
+.rest2{
+    font-size: 150%;
+    text-shadow: 2px 2px 1px white;
+}
+
+.square:hover {
+    height: 49px;
+    width: 49px;
+    border-color: gold;
+    border-width: 3px;
+  }
+
+.square{
+    border: solid;
+    cursor: pointer;
+    border-radius: 5px;
+    border-width: 1px; 
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    margin: 1px;
+    text-align: center;
+    font-size: 250%;
+    padding: 0px;
+    font-weight: unset;
+}
+
+.odd{
+    background-color: white;
+    border-color: black;
+}
+
+.even{
+    background-color: black;
+    border-color: white;
+}
+
+#board{
+    margin-top: 40px;
+    margin-left: -20px;
+    height: 100%x;
+    width: 477px;
+    text-align: center;
+    padding: 0px;
+}
+
+#game{
+    background-color: black;
+    height: 549px;
+}
+
+#help{
+    background-color: black;
+    height: 120%;
+    width: 1359px;
+    margin: -10px;
+}
+#contain2{
+    /* background-color: rgb(88, 208, 255); */
+    background-color: white;
+    height: 120%;
+    padding: 100px;
+}
+
+.m{
+    margin-top: 50px;
+}
+
+.bpiece{
+    display: inline-block;
+    text-shadow: 2px 2px 1px white;
+}
+
+.wpiece{
+    display: inline-block; 
+    color: white; 
+    text-shadow: 2px 2px 1px black;
+}
+
+.headingStyle{
+    display: inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.heading{
+    display: inline-block;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+
+.img4{
+    margin-left: 30%;
+    height: 300px;
+    width: 300px;
+}
+
+.img5{
+    height: 300px;
+    width: 300px;
+}
