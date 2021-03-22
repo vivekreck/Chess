@@ -46,22 +46,22 @@ var pawn_Wf = new Piece_detail('pawn', '&#9817', 'f6', 'w');
 var pawn_Wg = new Piece_detail('pawn', '&#9817', 'g6', 'w');
 var pawn_Wh = new Piece_detail('pawn', '&#9817', 'h6', 'w');
 
-var rock_Ba = new Piece_detail('rock', '&#9820', 'a0', 'b');
+var rook_Ba = new Piece_detail('rook', '&#9820', 'a0', 'b');
 var knight_Bb = new Piece_detail('knight', '&#9822', 'b0', 'b');
 var bishop_Bc = new Piece_detail('bishop', '&#9821', 'c0', 'b');
 var queen_Bd = new Piece_detail('queen', '&#9819', 'd0', 'b');
 var king_Be = new Piece_detail('king', '&#9818', 'e0', 'b');
 var bishop_Bf = new Piece_detail('bishop', '&#9821', 'f0', 'b');
 var knight_Bg = new Piece_detail('knight', '&#9822', 'g0', 'b');
-var rock_Bh = new Piece_detail('rock', '&#9820', 'h0', 'b');
-var rock_Wa = new Piece_detail('rock', '&#9814', 'a7', 'w');
+var rook_Bh = new Piece_detail('rook', '&#9820', 'h0', 'b');
+var rook_Wa = new Piece_detail('rook', '&#9814', 'a7', 'w');
 var knight_Wb = new Piece_detail('knight', '&#9816', 'b7', 'w');
 var bishop_Wc = new Piece_detail('bishop', '&#9815', 'c7', 'w');
 var queen_Wd = new Piece_detail('queen', '&#9813', 'd7', 'w');
 var king_We = new Piece_detail('king', '&#9812', 'e7', 'w');
 var bishop_Wf = new Piece_detail('bishop', '&#9815', 'f7', 'w');
 var knight_Wg = new Piece_detail('knight', '&#9816', 'g7', 'w');
-var rock_Wh = new Piece_detail('rock', '&#9814', 'h7', 'w');
+var rook_Wh = new Piece_detail('rook', '&#9814', 'h7', 'w');
 
 piece_place(pawn_Ba);
 piece_place(pawn_Bb);
@@ -80,22 +80,22 @@ piece_place(pawn_Wf);
 piece_place(pawn_Wg);
 piece_place(pawn_Wh);
 
-piece_place(rock_Ba);
+piece_place(rook_Ba);
 piece_place(knight_Bb);
 piece_place(bishop_Bc);
 piece_place(queen_Bd);
 piece_place(king_Be);
 piece_place(bishop_Bf);
 piece_place(knight_Bg);
-piece_place(rock_Bh);
-piece_place(rock_Wa);
+piece_place(rook_Bh);
+piece_place(rook_Wa);
 piece_place(knight_Wb);
 piece_place(bishop_Wc);
 piece_place(queen_Wd);
 piece_place(king_We);
 piece_place(bishop_Wf);
 piece_place(knight_Wg);
-piece_place(rock_Wh);
+piece_place(rook_Wh);
 
 //******************************************************************************************************************************************************************************************************
 //******************************************************************************************************************************************************************************************************
@@ -130,8 +130,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Ba.name == 'queen') { queen_move_place(pawn_Ba, queen_king_safemove(pawn_Ba)); }
-            else if (pawn_Ba.name == 'rock') { rock_bishop_move_place(pawn_Ba, rock_king_safemove(pawn_Ba)); }
-            else if (pawn_Ba.name == 'bishop') { bishop_move_place(pawn_Ba, bishop_king_safemove(pawn_Ba)); }
+            else if (pawn_Ba.name == 'rook') { rook_bishop_move_place(pawn_Ba, rook_king_safemove(pawn_Ba)); }
+            else if (pawn_Ba.name == 'bishop') { rook_bishop_move_place(pawn_Ba, bishop_king_safemove(pawn_Ba)); }
             else if (pawn_Ba.name == 'knight') { knight_move_place(pawn_Ba, knight_king_safemove(pawn_Ba)); }
             else if (pawn_Ba.name == 'pawn') { pawn_move_place(pawn_Ba, pawn_king_safemove(pawn_Ba)); }
             console.log('pba');
@@ -140,8 +140,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Bb.name == 'queen') { queen_move_place(pawn_Bb, queen_king_safemove(pawn_Bb)); }
-            else if (pawn_Bb.name == 'rock') { rock_bishop_move_place(pawn_Bb, rock_king_safemove(pawn_Bb)); }
-            else if (pawn_Bb.name == 'bishop') { bishop_move_place(pawn_Bb, bishop_king_safemove(pawn_Ba)); }
+            else if (pawn_Bb.name == 'rook') { rook_bishop_move_place(pawn_Bb, rook_king_safemove(pawn_Bb)); }
+            else if (pawn_Bb.name == 'bishop') { rook_bishop_move_place(pawn_Bb, bishop_king_safemove(pawn_Ba)); }
             else if (pawn_Bb.name == 'knight') { knight_move_place(pawn_Bb, knight_king_safemove(pawn_Bb)); }
             else if (pawn_Bb.name == 'pawn') { pawn_move_place(pawn_Bb, pawn_king_safemove(pawn_Bb)); }
             console.log('pbb');
@@ -150,8 +150,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Bc.name == 'queen') { queen_move_place(pawn_Bc, queen_king_safemove(pawn_Bc)); }
-            else if (pawn_Bc.name == 'rock') { rock_bishop_move_place(pawn_Bc, rock_king_safemove(pawn_Bc)); }
-            else if (pawn_Bc.name == 'bishop') { bishop_move_place(pawn_Bc, bishop_king_safemove(pawn_Bc)); }
+            else if (pawn_Bc.name == 'rook') { rook_bishop_move_place(pawn_Bc, rook_king_safemove(pawn_Bc)); }
+            else if (pawn_Bc.name == 'bishop') { rook_bishop_move_place(pawn_Bc, bishop_king_safemove(pawn_Bc)); }
             else if (pawn_Bc.name == 'knight') { knight_move_place(pawn_Bc, knight_king_safemove(pawn_Bc)); }
             else if (pawn_Bc.name == 'pawn') { pawn_move_place(pawn_Bc, pawn_king_safemove(pawn_Bc)); }
             console.log('pbc');
@@ -160,8 +160,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Bd.name == 'queen') { queen_move_place(pawn_Bd, queen_king_safemove(pawn_Bd)); }
-            else if (pawn_Bd.name == 'rock') { rock_bishop_move_place(pawn_Bd, rock_king_safemove(pawn_Bd)); }
-            else if (pawn_Bd.name == 'bishop') { bishop_move_place(pawn_Bd, bishop_king_safemove(pawn_Bd)); }
+            else if (pawn_Bd.name == 'rook') { rook_bishop_move_place(pawn_Bd, rook_king_safemove(pawn_Bd)); }
+            else if (pawn_Bd.name == 'bishop') { rook_bishop_move_place(pawn_Bd, bishop_king_safemove(pawn_Bd)); }
             else if (pawn_Bd.name == 'knight') { knight_move_place(pawn_Bd, knight_king_safemove(pawn_Bd)); }
             else if (pawn_Bd.name == 'pawn') { pawn_move_place(pawn_Bd, pawn_king_safemove(pawn_Bd)); }
             console.log('pbd');
@@ -170,8 +170,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Be.name == 'queen') { queen_move_place(pawn_Be, queen_king_safemove(pawn_Be)); }
-            else if (pawn_Be.name == 'rock') { rock_bishop_move_place(pawn_Be, rock_king_safemove(pawn_Be)); }
-            else if (pawn_Be.name == 'bishop') { bishop_move_place(pawn_Be, bishop_king_safemove(pawn_Be)); }
+            else if (pawn_Be.name == 'rook') { rook_bishop_move_place(pawn_Be, rook_king_safemove(pawn_Be)); }
+            else if (pawn_Be.name == 'bishop') { rook_bishop_move_place(pawn_Be, bishop_king_safemove(pawn_Be)); }
             else if (pawn_Be.name == 'knight') { knight_move_place(pawn_Be, knight_king_safemove(pawn_Be)); }
             else if (pawn_Be.name == 'pawn') { pawn_move_place(pawn_Be, pawn_king_safemove(pawn_Be)); }
             console.log('pbe');
@@ -180,8 +180,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Bf.name == 'queen') { queen_move_place(pawn_Bf, queen_king_safemove(pawn_Bf)); }
-            else if (pawn_Bf.name == 'rock') { rock_bishop_move_place(pawn_Bf, rock_king_safemove(pawn_Bf)); }
-            else if (pawn_Bf.name == 'bishop') { bishop_move_place(pawn_Bf, bishop_king_safemove(pawn_Bf)); }
+            else if (pawn_Bf.name == 'rook') { rook_bishop_move_place(pawn_Bf, rook_king_safemove(pawn_Bf)); }
+            else if (pawn_Bf.name == 'bishop') { rook_bishop_move_place(pawn_Bf, bishop_king_safemove(pawn_Bf)); }
             else if (pawn_Bf.name == 'knight') { knight_move_place(pawn_Bf, knight_king_safemove(pawn_Bf)); }
             else if (pawn_Bf.name == 'pawn') { pawn_move_place(pawn_Bf, pawn_king_safemove(pawn_Bf)); }
             console.log('pbf');
@@ -190,8 +190,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Bg.name == 'queen') { queen_move_place(pawn_Bg, queen_king_safemove(pawn_Bg)); }
-            else if (pawn_Bg.name == 'rock') { rock_bishop_move_place(pawn_Bg, rock_king_safemove(pawn_Bg)); }
-            else if (pawn_Bg.name == 'bishop') { bishop_move_place(pawn_Bg, bishop_king_safemove(pawn_Bg)); }
+            else if (pawn_Bg.name == 'rook') { rook_bishop_move_place(pawn_Bg, rook_king_safemove(pawn_Bg)); }
+            else if (pawn_Bg.name == 'bishop') { rook_bishop_move_place(pawn_Bg, bishop_king_safemove(pawn_Bg)); }
             else if (pawn_Bg.name == 'knight') { knight_move_place(pawn_Bg, knight_king_safemove(pawn_Bg)); }
             else if (pawn_Bg.name == 'pawn') { pawn_move_place(pawn_Bg, pawn_king_safemove(pawn_Bg)); }
             console.log('pbg');
@@ -200,8 +200,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Bh.name == 'queen') { queen_move_place(pawn_Bh, queen_king_safemove(pawn_Bh)); }
-            else if (pawn_Bh.name == 'rock') { rock_bishop_move_place(pawn_Bh, rock_king_safemove(pawn_Bh)); }
-            else if (pawn_Bh.name == 'bishop') { bishop_move_place(pawn_Bh, bishop_king_safemove(pawn_Bh)); }
+            else if (pawn_Bh.name == 'rook') { rook_bishop_move_place(pawn_Bh, rook_king_safemove(pawn_Bh)); }
+            else if (pawn_Bh.name == 'bishop') { rook_bishop_move_place(pawn_Bh, bishop_king_safemove(pawn_Bh)); }
             else if (pawn_Bh.name == 'knight') { knight_move_place(pawn_Bh, knight_king_safemove(pawn_Bh)); }
             else if (pawn_Bh.name == 'pawn') { pawn_move_place(pawn_Bh, pawn_king_safemove(pawn_Bh)); }
             console.log('pbh');
@@ -212,8 +212,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Wa.name == 'queen') { queen_move_place(pawn_Wa, queen_king_safemove(pawn_Wa)); }
-            else if (pawn_Wa.name == 'rock') { rock_bishop_move_place(pawn_Wa, rock_king_safemove(pawn_Wa)); }
-            else if (pawn_Wa.name == 'bishop') { bishop_move_place(pawn_Wa, bishop_king_safemove(pawn_Wa)); }
+            else if (pawn_Wa.name == 'rook') { rook_bishop_move_place(pawn_Wa, rook_king_safemove(pawn_Wa)); }
+            else if (pawn_Wa.name == 'bishop') { rook_bishop_move_place(pawn_Wa, bishop_king_safemove(pawn_Wa)); }
             else if (pawn_Wa.name == 'knight') { knight_move_place(pawn_Wa, knight_king_safemove(pawn_Wa)); }
             else if (pawn_Wa.name == 'pawn') { pawn_move_place(pawn_Wa, pawn_king_safemove(pawn_Wa)); }
             console.log('pWa');
@@ -222,8 +222,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Wb.name == 'queen') { queen_move_place(pawn_Wb, queen_king_safemove(pawn_Wb)); }
-            else if (pawn_Wb.name == 'rock') { rock_bishop_move_place(pawn_Wb, rock_king_safemove(pawn_Wb)); }
-            else if (pawn_Wb.name == 'bishop') { bishop_move_place(pawn_Wb, bishop_king_safemove(pawn_Wb)); }
+            else if (pawn_Wb.name == 'rook') { rook_bishop_move_place(pawn_Wb, rook_king_safemove(pawn_Wb)); }
+            else if (pawn_Wb.name == 'bishop') { rook_bishop_move_place(pawn_Wb, bishop_king_safemove(pawn_Wb)); }
             else if (pawn_Wb.name == 'knight') { knight_move_place(pawn_Wb, knight_king_safemove(pawn_Wb)); }
             else if (pawn_Wb.name == 'pawn') { pawn_move_place(pawn_Wb, pawn_king_safemove(pawn_Wb)); }
             console.log('pWb');
@@ -232,8 +232,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Wc.name == 'queen') { queen_move_place(pawn_Wc, queen_king_safemove(pawn_Wc)); }
-            else if (pawn_Wc.name == 'rock') { rock_bishop_move_place(pawn_Wc, rock_king_safemove(pawn_Wc)); }
-            else if (pawn_Wc.name == 'bishop') { bishop_move_place(pawn_Wc, bishop_king_safemove(pawn_Wc)); }
+            else if (pawn_Wc.name == 'rook') { rook_bishop_move_place(pawn_Wc, rook_king_safemove(pawn_Wc)); }
+            else if (pawn_Wc.name == 'bishop') { rook_bishop_move_place(pawn_Wc, bishop_king_safemove(pawn_Wc)); }
             else if (pawn_Wc.name == 'knight') { knight_move_place(pawn_Wc, knight_king_safemove(pawn_Wc)); }
             else if (pawn_Wc.name == 'pawn') { pawn_move_place(pawn_Wc, pawn_king_safemove(pawn_Wc)); }
             console.log('pWc');
@@ -242,8 +242,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Wd.name == 'queen') { queen_move_place(pawn_Wd, queen_king_safemove(pawn_Wd)); }
-            else if (pawn_Wd.name == 'rock') { rock_bishop_move_place(pawn_Wd, rock_king_safemove(pawn_Wd)); }
-            else if (pawn_Wd.name == 'bishop') { bishop_move_place(pawn_Wd, bishop_king_safemove(pawn_Wd)); }
+            else if (pawn_Wd.name == 'rook') { rook_bishop_move_place(pawn_Wd, rook_king_safemove(pawn_Wd)); }
+            else if (pawn_Wd.name == 'bishop') { rook_bishop_move_place(pawn_Wd, bishop_king_safemove(pawn_Wd)); }
             else if (pawn_Wd.name == 'knight') { knight_move_place(pawn_Wd, knight_king_safemove(pawn_Wd)); }
             else if (pawn_Wd.name == 'pawn') { pawn_move_place(pawn_Wd, pawn_king_safemove(pawn_Wd)); }
             console.log('pWd');
@@ -252,8 +252,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_We.name == 'queen') { queen_move_place(pawn_We, queen_king_safemove(pawn_We)); }
-            else if (pawn_We.name == 'rock') { rock_bishop_move_place(pawn_We, rock_king_safemove(pawn_We)); }
-            else if (pawn_We.name == 'bishop') { bishop_move_place(pawn_We, bishop_king_safemove(pawn_We)); }
+            else if (pawn_We.name == 'rook') { rook_bishop_move_place(pawn_We, rook_king_safemove(pawn_We)); }
+            else if (pawn_We.name == 'bishop') { rook_bishop_move_place(pawn_We, bishop_king_safemove(pawn_We)); }
             else if (pawn_We.name == 'knight') { knight_move_place(pawn_We, knight_king_safemove(pawn_We)); }
             else if (pawn_We.name == 'pawn') { pawn_move_place(pawn_We, pawn_king_safemove(pawn_We)); }
             console.log('pWe');
@@ -262,8 +262,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Wf.name == 'queen') { queen_move_place(pawn_Wf, queen_king_safemove(pawn_Wf)); }
-            else if (pawn_Wf.name == 'rock') { rock_bishop_move_place(pawn_Wf, rock_king_safemove(pawn_Wf)); }
-            else if (pawn_Wf.name == 'bishop') { bishop_move_place(pawn_Wf, bishop_king_safemove(pawn_Wf)); }
+            else if (pawn_Wf.name == 'rook') { rook_bishop_move_place(pawn_Wf, rook_king_safemove(pawn_Wf)); }
+            else if (pawn_Wf.name == 'bishop') { rook_bishop_move_place(pawn_Wf, bishop_king_safemove(pawn_Wf)); }
             else if (pawn_Wf.name == 'knight') { knight_move_place(pawn_Wf, knight_king_safemove(pawn_Wf)); }
             else if (pawn_Wf.name == 'pawn') { pawn_move_place(pawn_Wf, pawn_king_safemove(pawn_Wf)); }
             console.log('pWf');
@@ -272,8 +272,8 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Wg.name == 'queen') { queen_move_place(pawn_Wg, queen_king_safemove(pawn_Wg)); }
-            else if (pawn_Wg.name == 'rock') { rock_bishop_move_place(pawn_Wg, rock_king_safemove(pawn_Wg)); }
-            else if (pawn_Wg.name == 'bishop') { bishop_move_place(pawn_Wg, bishop_king_safemove(pawn_Wg)); }
+            else if (pawn_Wg.name == 'rook') { rook_bishop_move_place(pawn_Wg, rook_king_safemove(pawn_Wg)); }
+            else if (pawn_Wg.name == 'bishop') { rook_bishop_move_place(pawn_Wg, bishop_king_safemove(pawn_Wg)); }
             else if (pawn_Wg.name == 'knight') { knight_move_place(pawn_Wg, knight_king_safemove(pawn_Wg)); }
             else if (pawn_Wg.name == 'pawn') { pawn_move_place(pawn_Wg, pawn_king_safemove(pawn_Wg)); }
             console.log('pWg');
@@ -282,17 +282,17 @@ jQuery(document).ready(function () {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
             if (pawn_Wh.name == 'queen') { queen_move_place(pawn_Wh, queen_king_safemove(pawn_Wh)); }
-            else if (pawn_Wh.name == 'rock') { rock_bishop_move_place(pawn_Wh, rock_king_safemove(pawn_Wh)); }
-            else if (pawn_Wh.name == 'bishop') { bishop_move_place(pawn_Wh, bishop_king_safemove(pawn_Wh)); }
+            else if (pawn_Wh.name == 'rook') { rook_bishop_move_place(pawn_Wh, rook_king_safemove(pawn_Wh)); }
+            else if (pawn_Wh.name == 'bishop') { rook_bishop_move_place(pawn_Wh, bishop_king_safemove(pawn_Wh)); }
             else if (pawn_Wh.name == 'knight') { knight_move_place(pawn_Wh, knight_king_safemove(pawn_Wh)); }
             else if (pawn_Wh.name == 'pawn') { pawn_move_place(pawn_Wh, pawn_king_safemove(pawn_Wh)); }
             console.log('pWh');
         }
 
-        else if (this.id == rock_Ba.position && player == rock_Ba.player) {
+        else if (this.id == rook_Ba.position && player == rook_Ba.player) {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
-            rock_bishop_move_place(rock_Ba, rock_king_safemove(rock_Ba));
+            rook_bishop_move_place(rook_Ba, rook_king_safemove(rook_Ba));
             console.log('rba');
         }
         else if (this.id == knight_Bb.position && player == knight_Bb.player) {
@@ -304,7 +304,7 @@ jQuery(document).ready(function () {
         else if (this.id == bishop_Bc.position && player == bishop_Bc.player) {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
-            rock_bishop_move_place(bishop_Bc, bishop_king_safemove(bishop_Bc));
+            rook_bishop_move_place(bishop_Bc, bishop_king_safemove(bishop_Bc));
             console.log('bbc');
         }
         else if (this.id == queen_Bd.position && player == queen_Bd.player) {
@@ -323,7 +323,7 @@ jQuery(document).ready(function () {
         else if (this.id == bishop_Bf.position && player == bishop_Bf.player) {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
-            rock_bishop_move_place(bishop_Bf, bishop_king_safemove(bishop_Bf));
+            rook_bishop_move_place(bishop_Bf, bishop_king_safemove(bishop_Bf));
             console.log('bbf');
         }
         else if (this.id == knight_Bg.position && player == knight_Bg.player) {
@@ -332,18 +332,18 @@ jQuery(document).ready(function () {
             knight_move_place(knight_Bg, knight_king_safemove(knight_Bg));
             console.log('kbg');
         }
-        else if (this.id == rock_Bh.position && player == rock_Bh.player) {
+        else if (this.id == rook_Bh.position && player == rook_Bh.player) {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
-            rock_bishop_move_place(rock_Bh, (rock_king_safemove(rock_Bh)));
+            rook_bishop_move_place(rook_Bh, (rook_king_safemove(rook_Bh)));
             console.log('rbh');
         }
 
 
-        else if (this.id == rock_Wa.position && player == rock_Wa.player) {
+        else if (this.id == rook_Wa.position && player == rook_Wa.player) {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
-            rock_bishop_move_place(rock_Wa, (rock_king_safemove(rock_Wa)));
+            rook_bishop_move_place(rook_Wa, (rook_king_safemove(rook_Wa)));
             console.log('rwa');
         }
         else if (this.id == knight_Wb.position && player == knight_Wb.player) {
@@ -355,7 +355,7 @@ jQuery(document).ready(function () {
         else if (this.id == bishop_Wc.position && player == bishop_Wc.player) {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
-            rock_bishop_move_place(bishop_Wc, bishop_king_safemove(bishop_Wc));
+            rook_bishop_move_place(bishop_Wc, bishop_king_safemove(bishop_Wc));
             console.log('bWc');
         }
         else if (this.id == queen_Wd.position && player == queen_Wd.player) {
@@ -374,7 +374,7 @@ jQuery(document).ready(function () {
         else if (this.id == bishop_Wf.position && player == bishop_Wf.player) {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
-            rock_bishop_move_place(bishop_Wf, bishop_king_safemove(bishop_Wf));
+            rook_bishop_move_place(bishop_Wf, bishop_king_safemove(bishop_Wf));
             console.log('bWf');
         }
         else if (this.id == knight_Wg.position && player == knight_Wg.player) {
@@ -383,10 +383,10 @@ jQuery(document).ready(function () {
             knight_move_place(knight_Wg, knight_king_safemove(knight_Wg));
             console.log('kWg');
         }
-        else if (this.id == rock_Wh.position && player == rock_Wh.player) {
+        else if (this.id == rook_Wh.position && player == rook_Wh.player) {
             let id = '#' + this.id;
             $(id).css("background-color", color1);
-            rock_bishop_move_place(rock_Wh, (rock_king_safemove(rock_Wh)));
+            rook_bishop_move_place(rook_Wh, (rook_king_safemove(rook_Wh)));
             console.log('rWh');
         }
     });
@@ -401,15 +401,15 @@ function black_special_move() {
         $("#c0").click(function () {
             if (black_left) {
                 $('#' + king_Be.position).css('textShadow', '');
-                $('#' + rock_Ba.position).css('textShadow', '');
+                $('#' + rook_Ba.position).css('textShadow', '');
                 document.getElementById(king_Be.position).style.color = '';
-                document.getElementById(rock_Ba.position).style.color = '';
+                document.getElementById(rook_Ba.position).style.color = '';
                 changeplace(king_Be, 'c0');
-                changeplace(rock_Ba, 'd0');
+                changeplace(rook_Ba, 'd0');
                 if (document.getElementById(king_Be.position).className[7] == 'e') { $('#' + king_Be.position).css('textShadow', white_shadow); }
-                if (document.getElementById(rock_Ba.position).className[7] == 'e') { $('#' + rock_Ba.position).css('textShadow', white_shadow); }
+                if (document.getElementById(rook_Ba.position).className[7] == 'e') { $('#' + rook_Ba.position).css('textShadow', white_shadow); }
                 document.getElementById(king_Be.position).style.color = cplayer2;
-                document.getElementById(rock_Ba.position).style.color = cplayer2;
+                document.getElementById(rook_Ba.position).style.color = cplayer2;
                 player = 'w';
             }
             if (player == 'w') {
@@ -427,15 +427,15 @@ function black_special_move() {
         $("#g0").click(function () {
             if (black_right) {
                 $('#' + king_Be.position).css('textShadow', '');
-                $('#' + rock_Ba.position).css('textShadow', '');
+                $('#' + rook_Ba.position).css('textShadow', '');
                 document.getElementById(king_Be.position).style.color = '';
-                document.getElementById(rock_Bh.position).style.color = '';
+                document.getElementById(rook_Bh.position).style.color = '';
                 changeplace(king_Be, 'g0');
-                changeplace(rock_Bh, 'f0');
+                changeplace(rook_Bh, 'f0');
                 if (document.getElementById(king_Be.position).className[7] == 'e') { $('#' + king_Be.position).css('textShadow', white_shadow); }
-                if (document.getElementById(rock_Bh.position).className[7] == 'e') { $('#' + rock_Bh.position).css('textShadow', white_shadow); }
+                if (document.getElementById(rook_Bh.position).className[7] == 'e') { $('#' + rook_Bh.position).css('textShadow', white_shadow); }
                 document.getElementById(king_Be.position).style.color = cplayer2;
-                document.getElementById(rock_Bh.position).style.color = cplayer2;
+                document.getElementById(rook_Bh.position).style.color = cplayer2;
                 player = 'w';
             }
             if (player == 'w') {
@@ -455,15 +455,15 @@ function white_special_move() {
         $("#c7").click(function () {
             if (white_left) {
                 $('#' + king_We.position).css('textShadow', '');
-                $('#' + rock_Wh.position).css('textShadow', '');
+                $('#' + rook_Wh.position).css('textShadow', '');
                 document.getElementById(king_We.position).style.color = '';
-                document.getElementById(rock_Wa.position).style.color = '';
+                document.getElementById(rook_Wa.position).style.color = '';
                 changeplace(king_We, 'c7');
-                changeplace(rock_Wa, 'd7');
+                changeplace(rook_Wa, 'd7');
                 if (document.getElementById(king_We.position).className[7] == 'o') { $('#' + king_We.position).css('textShadow', black_shadow); }
-                if (document.getElementById(rock_Wh.position).className[7] == 'o') { $('#' + rock_Wh.position).css('textShadow', black_shadow); }
+                if (document.getElementById(rook_Wh.position).className[7] == 'o') { $('#' + rook_Wh.position).css('textShadow', black_shadow); }
                 document.getElementById(king_We.position).style.color = cplayer1;
-                document.getElementById(rock_Wa.position).style.color = cplayer1;
+                document.getElementById(rook_Wa.position).style.color = cplayer1;
                 player = 'b';
             }
             if (player == 'b') {
@@ -481,15 +481,15 @@ function white_special_move() {
         $("#g7").click(function () {
             if (white_right) {
                 $('#' + king_We.position).css('textShadow', '');
-                $('#' + rock_Wh.position).css('textShadow', '');
+                $('#' + rook_Wh.position).css('textShadow', '');
                 document.getElementById(king_We.position).style.color = '';
-                document.getElementById(rock_Wh.position).style.color = '';
+                document.getElementById(rook_Wh.position).style.color = '';
                 changeplace(king_We, 'g7');
-                changeplace(rock_Wh, 'f7');
+                changeplace(rook_Wh, 'f7');
                 if (document.getElementById(king_We.position).className[7] == 'o') { $('#' + king_We.position).css('textShadow', black_shadow); }
-                if (document.getElementById(rock_Wh.position).className[7] == 'o') { $('#' + rock_Wh.position).css('textShadow', black_shadow); }
+                if (document.getElementById(rook_Wh.position).className[7] == 'o') { $('#' + rook_Wh.position).css('textShadow', black_shadow); }
                 document.getElementById(king_We.position).style.color = cplayer1;
-                document.getElementById(rock_Wh.position).style.color = cplayer1;
+                document.getElementById(rook_Wh.position).style.color = cplayer1;
                 player = 'b';
             }
             if (player == 'b') {
@@ -512,16 +512,16 @@ function king_rook_intial() {
         black_left = false;
         black_right = false;
     }
-    if (rock_Ba.position != 'a0') {
+    if (rook_Ba.position != 'a0') {
         black_left = false;
     }
-    if (rock_Bh.position != 'h0') {
+    if (rook_Bh.position != 'h0') {
         black_right = false;
     }
-    if (rock_Wa.position != 'a7') {
+    if (rook_Wa.position != 'a7') {
         white_left = false;
     }
-    if (rock_Wh.position != 'h7') {
+    if (rook_Wh.position != 'h7') {
         white_right = false;
     }
 }
@@ -846,7 +846,7 @@ function knight_possible_move(piece) {
 //******************************************************************************************************************************************************************************************************
 //******************************************************************************************************************************************************************************************************
 
-function rock_bishop_move_place(piece, move) {
+function rook_bishop_move_place(piece, move) {
     for (let i = 0; i < move.length; i++) {
         for (let j = 0; j < move[i].length; j++) {
             if (move[i][j] == null) {
@@ -989,7 +989,7 @@ function bishop_possible_move(piece) {
 //******************************************************************************************************************************************************************************************************
 //******************************************************************************************************************************************************************************************************
 
-function rock_possible_move(piece) {
+function rook_possible_move(piece) {
     let player2 = piece.player;
     if (piece.player == 'w') {
         player2 = 'b';
@@ -1118,24 +1118,99 @@ function pawn_move_place(piece, move) {
             array1 = [];
             array2 = [];
             move = [];
+
             if (piece.position != null && piece.name == 'pawn' && piece.player == 'b' && piece.position[1] == '7') {
-                piece.name = 'queen';
-                piece.unicode = '&#9819';
-                piece_place(piece);
-                let black_move = black_king_check()[0];
-                let white_move = white_king_check()[0];
-                if (black_move) { $('#' + king_Be.position).css("backgroundColor", check_color); }
-                if (white_move) { $('#' + king_We.position).css("backgroundColor", check_color); }        
+                $('#selection2').modal('show');
+                $('#bpqueen').click(function () {
+                    piece.name = 'queen';
+                    piece.unicode = '&#9819';
+                    piece_place(piece);
+                    let black_move = black_king_check()[0];
+                    let white_move = white_king_check()[0];
+                    if (black_move) { $('#' + king_Be.position).css("backgroundColor", check_color); }
+                    if (white_move) { $('#' + king_We.position).css("backgroundColor", check_color); }
+                    $('#selection2').modal('hide');
+                });
+
+                $('#bprook').click(function () {
+                    piece.name = 'rook';
+                    piece.unicode = '&#9820';
+                    piece_place(piece);
+                    let black_move = black_king_check()[0];
+                    let white_move = white_king_check()[0];
+                    if (black_move) { $('#' + king_Be.position).css("backgroundColor", check_color); }
+                    if (white_move) { $('#' + king_We.position).css("backgroundColor", check_color); }
+                    $('#selection2').modal('hide');
+                });
+
+                $('#bpbishop').click(function () {
+                    piece.name = 'bishop';
+                    piece.unicode = '&#9821';
+                    piece_place(piece);
+                    let black_move = black_king_check()[0];
+                    let white_move = white_king_check()[0];
+                    if (black_move) { $('#' + king_Be.position).css("backgroundColor", check_color); }
+                    if (white_move) { $('#' + king_We.position).css("backgroundColor", check_color); }
+                    $('#selection2').modal('hide');
+                });
+
+                $('#bpknight').click(function () {
+                    piece.name = 'knight';
+                    piece.unicode = '&#9822';
+                    piece_place(piece);
+                    let black_move = black_king_check()[0];
+                    let white_move = white_king_check()[0];
+                    if (black_move) { $('#' + king_Be.position).css("backgroundColor", check_color); }
+                    if (white_move) { $('#' + king_We.position).css("backgroundColor", check_color); }
+                    $('#selection2').modal('hide');
+                });
             }
 
             if (piece.position != null && piece.name == 'pawn' && piece.player == 'w' && piece.position[1] == '0') {
-                piece.name = 'queen';
-                piece.unicode = '&#9813';
-                piece_place(piece);
-                let black_move = black_king_check()[0];
-                let white_move = white_king_check()[0];
-                if (black_move) { $('#' + king_Be.position).css("backgroundColor", check_color); }
-                if (white_move) { $('#' + king_We.position).css("backgroundColor", check_color); }        
+                $('#selection1').modal('show');
+                $('#wpqueen').click(function () {
+                    piece.name = 'queen';
+                    piece.unicode = '&#9813';
+                    piece_place(piece);
+                    let black_move = black_king_check()[0];
+                    let white_move = white_king_check()[0];
+                    if (black_move) { $('#' + king_Be.position).css("backgroundColor", check_color); }
+                    if (white_move) { $('#' + king_We.position).css("backgroundColor", check_color); }
+                    $('#selection1').modal('hide');
+                });
+
+                $('#wprook').click(function () {
+                    piece.name = 'rook';
+                    piece.unicode = '&#9814';
+                    piece_place(piece);
+                    let black_move = black_king_check()[0];
+                    let white_move = white_king_check()[0];
+                    if (black_move) { $('#' + king_Be.position).css("backgroundColor", check_color); }
+                    if (white_move) { $('#' + king_We.position).css("backgroundColor", check_color); }
+                    $('#selection1').modal('hide');
+                });
+
+                $('#wpbishop').click(function () {
+                    piece.name = 'bishop';
+                    piece.unicode = '&#9815';
+                    piece_place(piece);
+                    let black_move = black_king_check()[0];
+                    let white_move = white_king_check()[0];
+                    if (black_move) { $('#' + king_Be.position).css("backgroundColor", check_color); }
+                    if (white_move) { $('#' + king_We.position).css("backgroundColor", check_color); }
+                    $('#selection1').modal('hide');
+                });
+
+                $('#wpknight').click(function () {
+                    piece.name = 'knight';
+                    piece.unicode = '&#9816';
+                    piece_place(piece);
+                    let black_move = black_king_check()[0];
+                    let white_move = white_king_check()[0];
+                    if (black_move) { $('#' + king_Be.position).css("backgroundColor", check_color); }
+                    if (white_move) { $('#' + king_We.position).css("backgroundColor", check_color); }
+                    $('#selection1').modal('hide');
+                });
             }
         });
     }
@@ -1430,7 +1505,7 @@ function bishop_king_move(piece) {
     return array2;
 }
 
-function rock_king_move(piece) {
+function rook_king_move(piece) {
     let player2 = piece.player;
     if (piece.player == 'w') {
         player2 = 'b';
@@ -1511,23 +1586,23 @@ function White_king_checkmove() {
     if (pawn_Bg.name == 'pawn') { pawn_Bg_move = black_pawn_possible_move(pawn_Bg); }
     if (pawn_Bh.name == 'pawn') { pawn_Bh_move = black_pawn_possible_move(pawn_Bh); }
 
-    let rock_Ba_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let rook_Ba_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let knight_Bb_move = [null, null, null, null, null, null, null, null];
     let bishop_Bc_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let queen_Bd_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let king_Be_move = [null, null, null, null, null, null, null, null];
     let bishop_Bf_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let knight_Bg_move = [null, null, null, null, null, null, null, null];
-    let rock_Bh_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let rook_Bh_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
 
-    if (rock_Ba.name == 'rock') { rock_Ba_move = rock_king_move(rock_Ba); }
+    if (rook_Ba.name == 'rook') { rook_Ba_move = rook_king_move(rook_Ba); }
     if (knight_Bb.name == 'knight') { knight_Bb_move = knight_possible_move(knight_Bb); }
     if (bishop_Bc.name == 'bishop') { bishop_Bc_move = bishop_king_move(bishop_Bc); }
     if (queen_Bd.name == 'queen') { queen_Bd_move = queen_king_move(queen_Bd); }
     if (king_Be.name == 'king') { king_Be_move = king_king_move(king_Be); }
     if (bishop_Bf.name == 'bishop') { bishop_Bf_move = bishop_king_move(bishop_Bf); }
     if (knight_Bg.name == 'knight') { knight_Bg_move = knight_possible_move(knight_Bg); }
-    if (rock_Bh.name == 'rock') { rock_Bh_move = rock_king_move(rock_Bh); }
+    if (rook_Bh.name == 'rook') { rook_Bh_move = rook_king_move(rook_Bh); }
 
     let pawn_queen_Ba_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let pawn_queen_Bb_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
@@ -1537,7 +1612,7 @@ function White_king_checkmove() {
     let pawn_queen_Bf_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let pawn_queen_Bg_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let pawn_queen_Bh_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
-    
+
     if (pawn_Ba.name == 'queen') { pawn_queen_Ba_move = queen_king_move(pawn_Ba); }
     if (pawn_Bb.name == 'queen') { pawn_queen_Bb_move = queen_king_move(pawn_Bb); }
     if (pawn_Bc.name == 'queen') { pawn_queen_Bc_move = queen_king_move(pawn_Bc); }
@@ -1547,6 +1622,60 @@ function White_king_checkmove() {
     if (pawn_Bg.name == 'queen') { pawn_queen_Bg_move = queen_king_move(pawn_Bg); }
     if (pawn_Bh.name == 'queen') { pawn_queen_Bh_move = queen_king_move(pawn_Bh); }
 
+    let pawn_rook_Ba_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Bb_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Bc_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Bd_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Be_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Bf_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Bg_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Bh_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+
+
+    if (pawn_Ba.name == 'rook') { pawn_rook_Ba_move = rook_king_move(pawn_Ba); }
+    if (pawn_Bb.name == 'rook') { pawn_rook_Bb_move = rook_king_move(pawn_Bb); }
+    if (pawn_Bc.name == 'rook') { pawn_rook_Bc_move = rook_king_move(pawn_Bc); }
+    if (pawn_Bd.name == 'rook') { pawn_rook_Bd_move = rook_king_move(pawn_Bd); }
+    if (pawn_Be.name == 'rook') { pawn_rook_Be_move = rook_king_move(pawn_Be); }
+    if (pawn_Bf.name == 'rook') { pawn_rook_Bf_move = rook_king_move(pawn_Bf); }
+    if (pawn_Bg.name == 'rook') { pawn_rook_Bg_move = rook_king_move(pawn_Bg); }
+    if (pawn_Bh.name == 'rook') { pawn_rook_Bh_move = rook_king_move(pawn_Bh); }
+
+    let pawn_bishop_Ba_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Bb_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Bc_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Bd_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Be_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Bf_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Bg_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Bh_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+
+    if (pawn_Ba.name == 'bishop') { pawn_bishop_Ba_move = bishop_king_move(pawn_Ba); }
+    if (pawn_Bb.name == 'bishop') { pawn_bishop_Bb_move = bishop_king_move(pawn_Bb); }
+    if (pawn_Bc.name == 'bishop') { pawn_bishop_Bc_move = bishop_king_move(pawn_Bc); }
+    if (pawn_Bd.name == 'bishop') { pawn_bishop_Bd_move = bishop_king_move(pawn_Bd); }
+    if (pawn_Be.name == 'bishop') { pawn_bishop_Be_move = bishop_king_move(pawn_Be); }
+    if (pawn_Bf.name == 'bishop') { pawn_bishop_Bf_move = bishop_king_move(pawn_Bf); }
+    if (pawn_Bg.name == 'bishop') { pawn_bishop_Bg_move = bishop_king_move(pawn_Bg); }
+    if (pawn_Bh.name == 'bishop') { pawn_bishop_Bh_move = bishop_king_move(pawn_Bh); }
+
+    let pawn_knight_Ba_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bb_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bc_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bd_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Be_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bf_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bg_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bh_move = [null, null, null, null, null, null, null, null];
+
+    if (pawn_Ba.name == 'knight') { pawn_knight_Ba_move = knight_possible_move(pawn_Ba); }
+    if (pawn_Bb.name == 'knight') { pawn_knight_Bb_move = knight_possible_move(pawn_Bb); }
+    if (pawn_Bc.name == 'knight') { pawn_knight_Bc_move = knight_possible_move(pawn_Bc); }
+    if (pawn_Bd.name == 'knight') { pawn_knight_Bd_move = knight_possible_move(pawn_Bd); }
+    if (pawn_Be.name == 'knight') { pawn_knight_Be_move = knight_possible_move(pawn_Be); }
+    if (pawn_Bf.name == 'knight') { pawn_knight_Bf_move = knight_possible_move(pawn_Bf); }
+    if (pawn_Bg.name == 'knight') { pawn_knight_Bg_move = knight_possible_move(pawn_Bg); }
+    if (pawn_Bh.name == 'knight') { pawn_knight_Bh_move = knight_possible_move(pawn_Bh); }
 
     let king_We_move = king_possible_move(king_We);
 
@@ -1564,16 +1693,65 @@ function White_king_checkmove() {
             if (pawn_Bh_move[0] == element || pawn_Bh_move[3] == element) { k = 1; }
 
             for (let i = 0; i <= 3; i++) {
-                for (let j = 0; j < rock_Ba_move[i].length; j++) {
-                    if (rock_Ba_move[i][j] == null) { break; }
-                    if (rock_Ba_move[i][j] == element) { k = 1; break; }
+                for (let j = 0; j < rook_Ba_move[i].length; j++) {
+                    if (rook_Ba_move[i][j] == null) { break; }
+                    if (rook_Ba_move[i][j] == element) { k = 1; break; }
                 }
                 if (k == 1) { break; }
-                for (let j = 0; j < rock_Bh_move[i].length; j++) {
-                    if (rock_Bh_move[i][j] == null) { break; }
-                    if (rock_Bh_move[i][j] == element) { k = 1; break; }
+                for (let j = 0; j < rook_Bh_move[i].length; j++) {
+                    if (rook_Bh_move[i][j] == null) { break; }
+                    if (rook_Bh_move[i][j] == element) { k = 1; break; }
                 }
                 if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Ba_move[i].length; j++) {
+                    if (pawn_rook_Ba_move[i][j] == null) { break; }
+                    if (pawn_rook_Ba_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Bb_move[i].length; j++) {
+                    if (pawn_rook_Bb_move[i][j] == null) { break; }
+                    if (pawn_rook_Bb_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Bc_move[i].length; j++) {
+                    if (pawn_rook_Bc_move[i][j] == null) { break; }
+                    if (pawn_rook_Bc_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Bd_move[i].length; j++) {
+                    if (pawn_rook_Bd_move[i][j] == null) { break; }
+                    if (pawn_rook_Bd_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Be_move[i].length; j++) {
+                    if (pawn_rook_Be_move[i][j] == null) { break; }
+                    if (pawn_rook_Be_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Bf_move[i].length; j++) {
+                    if (pawn_rook_Bf_move[i][j] == null) { break; }
+                    if (pawn_rook_Bf_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Bg_move[i].length; j++) {
+                    if (pawn_rook_Bg_move[i][j] == null) { break; }
+                    if (pawn_rook_Bg_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Bh_move[i].length; j++) {
+                    if (pawn_rook_Bh_move[i][j] == null) { break; }
+                    if (pawn_rook_Bh_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
                 for (let j = 0; j < bishop_Bc_move[i].length; j++) {
                     if (bishop_Bc_move[i][j] == null) { break; }
                     if (bishop_Bc_move[i][j] == element) { k = 1; break; }
@@ -1584,6 +1762,54 @@ function White_king_checkmove() {
                     if (bishop_Bf_move[i][j] == element) { k = 1; break; }
                 }
                 if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Ba_move[i].length; j++) {
+                    if (pawn_bishop_Ba_move[i][j] == null) { break; }
+                    if (pawn_bishop_Ba_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Bb_move[i].length; j++) {
+                    if (pawn_bishop_Bb_move[i][j] == null) { break; }
+                    if (pawn_bishop_Bb_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Bc_move[i].length; j++) {
+                    if (pawn_bishop_Bc_move[i][j] == null) { break; }
+                    if (pawn_bishop_Bc_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Bd_move[i].length; j++) {
+                    if (pawn_bishop_Bd_move[i][j] == null) { break; }
+                    if (pawn_bishop_Bd_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Be_move[i].length; j++) {
+                    if (pawn_bishop_Be_move[i][j] == null) { break; }
+                    if (pawn_bishop_Be_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Bf_move[i].length; j++) {
+                    if (pawn_bishop_Bf_move[i][j] == null) { break; }
+                    if (pawn_bishop_Bf_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Bg_move[i].length; j++) {
+                    if (pawn_bishop_Bg_move[i][j] == null) { break; }
+                    if (pawn_bishop_Bg_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Bh_move[i].length; j++) {
+                    if (pawn_bishop_Bh_move[i][j] == null) { break; }
+                    if (pawn_bishop_Bh_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
             }
 
             for (let j = 0; j < knight_Bb_move.length; j++) {
@@ -1592,6 +1818,38 @@ function White_king_checkmove() {
 
             for (let j = 0; j < knight_Bg_move.length; j++) {
                 if (element == knight_Bg_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Ba_move.length; j++) {
+                if (element == pawn_knight_Ba_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Bb_move.length; j++) {
+                if (element == pawn_knight_Bb_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Bc_move.length; j++) {
+                if (element == pawn_knight_Bc_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Bd_move.length; j++) {
+                if (element == pawn_knight_Bd_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Be_move.length; j++) {
+                if (element == pawn_knight_Be_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Bf_move.length; j++) {
+                if (element == pawn_knight_Bf_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Bg_move.length; j++) {
+                if (element == pawn_knight_Bg_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Bh_move.length; j++) {
+                if (element == pawn_knight_Bh_move[j]) { k = 1; break; }
             }
 
             for (let j = 0; j < king_Be_move.length; j++) {
@@ -1682,23 +1940,23 @@ function black_king_checkmove() {
     if (pawn_Wg.name == 'pawn') { pawn_Wg_move = white_pawn_possible_move(pawn_Wg); }
     if (pawn_Wh.name == 'pawn') { pawn_Wh_move = white_pawn_possible_move(pawn_Wh); }
 
-    let rock_Wa_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let rook_Wa_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let knight_Wb_move = [null, null, null, null, null, null, null, null];
     let bishop_Wc_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let queen_Wd_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let king_We_move = [null, null, null, null, null, null, null, null];
     let bishop_Wf_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let knight_Wg_move = [null, null, null, null, null, null, null, null];
-    let rock_Wh_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let rook_Wh_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
 
-    if (rock_Wa.name == 'rock') { rock_Wa_move = rock_king_move(rock_Wa); }
+    if (rook_Wa.name == 'rook') { rook_Wa_move = rook_king_move(rook_Wa); }
     if (knight_Wb.name == 'knight') { knight_Wb_move = knight_possible_move(knight_Wb); }
     if (bishop_Wc.name == 'bishop') { bishop_Wc_move = bishop_king_move(bishop_Wc); }
     if (queen_Wd.name == 'queen') { queen_Wd_move = queen_king_move(queen_Wd); }
     if (king_We.name == 'king') { king_We_move = king_king_move(king_We); }
     if (bishop_Wf.name == 'bishop') { bishop_Wf_move = bishop_king_move(bishop_Wf); }
     if (knight_Wg.name == 'knight') { knight_Wg_move = knight_possible_move(knight_Wg); }
-    if (rock_Wh.name == 'rock') { rock_Wh_move = rock_king_move(rock_Wh); }
+    if (rook_Wh.name == 'rook') { rook_Wh_move = rook_king_move(rook_Wh); }
 
     let pawn_queen_Wa_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let pawn_queen_Wb_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
@@ -1708,7 +1966,7 @@ function black_king_checkmove() {
     let pawn_queen_Wf_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let pawn_queen_Wg_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
     let pawn_queen_Wh_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
-    
+
     if (pawn_Wa.name == 'queen') { pawn_queen_Wa_move = queen_king_move(pawn_Wa); }
     if (pawn_Wb.name == 'queen') { pawn_queen_Wb_move = queen_king_move(pawn_Wb); }
     if (pawn_Wc.name == 'queen') { pawn_queen_Wc_move = queen_king_move(pawn_Wc); }
@@ -1717,6 +1975,61 @@ function black_king_checkmove() {
     if (pawn_Wf.name == 'queen') { pawn_queen_Wf_move = queen_king_move(pawn_Wf); }
     if (pawn_Wg.name == 'queen') { pawn_queen_Wg_move = queen_king_move(pawn_Wg); }
     if (pawn_Wh.name == 'queen') { pawn_queen_Wh_move = queen_king_move(pawn_Wh); }
+
+    let pawn_rook_Wa_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Wb_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Wc_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Wd_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_We_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Wf_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Wg_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_rook_Wh_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+
+
+    if (pawn_Wa.name == 'rook') { pawn_rook_Wa_move = rook_king_move(pawn_Wa); }
+    if (pawn_Wb.name == 'rook') { pawn_rook_Wb_move = rook_king_move(pawn_Wb); }
+    if (pawn_Wc.name == 'rook') { pawn_rook_Wc_move = rook_king_move(pawn_Wc); }
+    if (pawn_Wd.name == 'rook') { pawn_rook_Wd_move = rook_king_move(pawn_Wd); }
+    if (pawn_We.name == 'rook') { pawn_rook_We_move = rook_king_move(pawn_We); }
+    if (pawn_Wf.name == 'rook') { pawn_rook_Wf_move = rook_king_move(pawn_Wf); }
+    if (pawn_Wg.name == 'rook') { pawn_rook_Wg_move = rook_king_move(pawn_Wg); }
+    if (pawn_Wh.name == 'rook') { pawn_rook_Wh_move = rook_king_move(pawn_Wh); }
+
+    let pawn_bishop_Wa_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Wb_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Wc_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Wd_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_We_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Wf_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Wg_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+    let pawn_bishop_Wh_move = [[null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null], [null, null, null, null, null, null, null]];
+
+    if (pawn_Wa.name == 'bishop') { pawn_bishop_Wa_move = bishop_king_move(pawn_Wa); }
+    if (pawn_Wb.name == 'bishop') { pawn_bishop_Wb_move = bishop_king_move(pawn_Wb); }
+    if (pawn_Wc.name == 'bishop') { pawn_bishop_Wc_move = bishop_king_move(pawn_Wc); }
+    if (pawn_Wd.name == 'bishop') { pawn_bishop_Wd_move = bishop_king_move(pawn_Wd); }
+    if (pawn_We.name == 'bishop') { pawn_bishop_We_move = bishop_king_move(pawn_We); }
+    if (pawn_Wf.name == 'bishop') { pawn_bishop_Wf_move = bishop_king_move(pawn_Wf); }
+    if (pawn_Wg.name == 'bishop') { pawn_bishop_Wg_move = bishop_king_move(pawn_Wg); }
+    if (pawn_Wh.name == 'bishop') { pawn_bishop_Wh_move = bishop_king_move(pawn_Wh); }
+
+    let pawn_knight_Wa_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wb_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wc_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wd_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_We_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wf_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wg_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wh_move = [null, null, null, null, null, null, null, null];
+
+    if (pawn_Wa.name == 'knight') { pawn_knight_Wa_move = knight_possible_move(pawn_Wa); }
+    if (pawn_Wb.name == 'knight') { pawn_knight_Wb_move = knight_possible_move(pawn_Wb); }
+    if (pawn_Wc.name == 'knight') { pawn_knight_Wc_move = knight_possible_move(pawn_Wc); }
+    if (pawn_Wd.name == 'knight') { pawn_knight_Wd_move = knight_possible_move(pawn_Wd); }
+    if (pawn_We.name == 'knight') { pawn_knight_We_move = knight_possible_move(pawn_We); }
+    if (pawn_Wf.name == 'knight') { pawn_knight_Wf_move = knight_possible_move(pawn_Wf); }
+    if (pawn_Wg.name == 'knight') { pawn_knight_Wg_move = knight_possible_move(pawn_Wg); }
+    if (pawn_Wh.name == 'knight') { pawn_knight_Wh_move = knight_possible_move(pawn_Wh); }
 
     let king_Be_move = king_possible_move(king_Be);
 
@@ -1734,16 +2047,65 @@ function black_king_checkmove() {
             if (pawn_Wh_move[0] == element || pawn_Wh_move[3] == element) { k = 1; }
 
             for (let i = 0; i <= 3; i++) {
-                for (let j = 0; j < rock_Wa_move[i].length; j++) {
-                    if (rock_Wa_move[i][j] == null) { break; }
-                    if (rock_Wa_move[i][j] == element) { k = 1; break; }
+                for (let j = 0; j < rook_Wa_move[i].length; j++) {
+                    if (rook_Wa_move[i][j] == null) { break; }
+                    if (rook_Wa_move[i][j] == element) { k = 1; break; }
                 }
                 if (k == 1) { break; }
-                for (let j = 0; j < rock_Wh_move[i].length; j++) {
-                    if (rock_Wh_move[i][j] == null) { break; }
-                    if (rock_Wh_move[i][j] == element) { k = 1; break; }
+                for (let j = 0; j < rook_Wh_move[i].length; j++) {
+                    if (rook_Wh_move[i][j] == null) { break; }
+                    if (rook_Wh_move[i][j] == element) { k = 1; break; }
                 }
                 if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Wa_move[i].length; j++) {
+                    if (pawn_rook_Wa_move[i][j] == null) { break; }
+                    if (pawn_rook_Wa_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Wb_move[i].length; j++) {
+                    if (pawn_rook_Wb_move[i][j] == null) { break; }
+                    if (pawn_rook_Wb_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Wc_move[i].length; j++) {
+                    if (pawn_rook_Wc_move[i][j] == null) { break; }
+                    if (pawn_rook_Wc_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Wd_move[i].length; j++) {
+                    if (pawn_rook_Wd_move[i][j] == null) { break; }
+                    if (pawn_rook_Wd_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_We_move[i].length; j++) {
+                    if (pawn_rook_We_move[i][j] == null) { break; }
+                    if (pawn_rook_We_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Wf_move[i].length; j++) {
+                    if (pawn_rook_Wf_move[i][j] == null) { break; }
+                    if (pawn_rook_Wf_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Wg_move[i].length; j++) {
+                    if (pawn_rook_Wg_move[i][j] == null) { break; }
+                    if (pawn_rook_Wg_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_rook_Wh_move[i].length; j++) {
+                    if (pawn_rook_Wh_move[i][j] == null) { break; }
+                    if (pawn_rook_Wh_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
                 for (let j = 0; j < bishop_Wc_move[i].length; j++) {
                     if (bishop_Wc_move[i][j] == null) { break; }
                     if (bishop_Wc_move[i][j] == element) { k = 1; break; }
@@ -1754,6 +2116,54 @@ function black_king_checkmove() {
                     if (bishop_Wf_move[i][j] == element) { k = 1; break; }
                 }
                 if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Wa_move[i].length; j++) {
+                    if (pawn_bishop_Wa_move[i][j] == null) { break; }
+                    if (pawn_bishop_Wa_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Wb_move[i].length; j++) {
+                    if (pawn_bishop_Wb_move[i][j] == null) { break; }
+                    if (pawn_bishop_Wb_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Wc_move[i].length; j++) {
+                    if (pawn_bishop_Wc_move[i][j] == null) { break; }
+                    if (pawn_bishop_Wc_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Wd_move[i].length; j++) {
+                    if (pawn_bishop_Wd_move[i][j] == null) { break; }
+                    if (pawn_bishop_Wd_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_We_move[i].length; j++) {
+                    if (pawn_bishop_We_move[i][j] == null) { break; }
+                    if (pawn_bishop_We_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Wf_move[i].length; j++) {
+                    if (pawn_bishop_Wf_move[i][j] == null) { break; }
+                    if (pawn_bishop_Wf_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Wg_move[i].length; j++) {
+                    if (pawn_bishop_Wg_move[i][j] == null) { break; }
+                    if (pawn_bishop_Wg_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
+
+                for (let j = 0; j < pawn_bishop_Wh_move[i].length; j++) {
+                    if (pawn_bishop_Wh_move[i][j] == null) { break; }
+                    if (pawn_bishop_Wh_move[i][j] == element) { k = 1; break; }
+                }
+                if (k == 1) { break; }
             }
 
             for (let j = 0; j < knight_Wb_move.length; j++) {
@@ -1762,6 +2172,38 @@ function black_king_checkmove() {
 
             for (let j = 0; j < knight_Wg_move.length; j++) {
                 if (element == knight_Wg_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Wa_move.length; j++) {
+                if (element == pawn_knight_Wa_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Wb_move.length; j++) {
+                if (element == pawn_knight_Wb_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Wc_move.length; j++) {
+                if (element == pawn_knight_Wc_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Wd_move.length; j++) {
+                if (element == pawn_knight_Wd_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_We_move.length; j++) {
+                if (element == pawn_knight_We_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Wf_move.length; j++) {
+                if (element == pawn_knight_Wf_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Wg_move.length; j++) {
+                if (element == pawn_knight_Wg_move[j]) { k = 1; break; }
+            }
+
+            for (let j = 0; j < pawn_knight_Wh_move.length; j++) {
+                if (element == pawn_knight_Wh_move[j]) { k = 1; break; }
             }
 
             for (let j = 0; j < king_We_move.length; j++) {
@@ -1854,22 +2296,22 @@ function black_king_check() {
     if (pawn_Wg.name == 'pawn') { pawn_Wg_move = white_pawn_possible_move(pawn_Wg); }
     if (pawn_Wh.name == 'pawn') { pawn_Wh_move = white_pawn_possible_move(pawn_Wh); }
 
-    let rock_Wa_move = [null, null, null, null];
+    let rook_Wa_move = [null, null, null, null];
     let knight_Wb_move = [null, null, null, null, null, null, null, null];
     let bishop_Wc_move = [null, null, null, null];
     let queen_Wd_move = [null, null, null, null, null, null, null, null];
     let bishop_Wf_move = [null, null, null, null];
     let knight_Wg_move = [null, null, null, null, null, null, null, null];
-    let rock_Wh_move = [null, null, null, null];
+    let rook_Wh_move = [null, null, null, null];
 
-    if (rock_Wa.name == 'rock') { rock_Wa_move = rock_possible_move(rock_Wa)[4]; }
+    if (rook_Wa.name == 'rook') { rook_Wa_move = rook_possible_move(rook_Wa)[4]; }
     if (knight_Wb.name == 'knight') { knight_Wb_move = knight_possible_move(knight_Wb); }
     if (bishop_Wc.name == 'bishop') { bishop_Wc_move = bishop_possible_move(bishop_Wc)[4]; }
     if (queen_Wd.name == 'queen') { queen_Wd_move = queen_possible_move(queen_Wd)[8]; }
     if (bishop_Wf.name == 'bishop') { bishop_Wf_move = bishop_possible_move(bishop_Wf)[4]; }
     if (knight_Wg.name == 'knight') { knight_Wg_move = knight_possible_move(knight_Wg); }
-    if (rock_Wh.name == 'rock') { rock_Wh_move = rock_possible_move(rock_Wh)[4]; }
-    
+    if (rook_Wh.name == 'rook') { rook_Wh_move = rook_possible_move(rook_Wh)[4]; }
+
     let pawn_queen_Wa_move = [null, null, null, null, null, null, null, null];
     let pawn_queen_Wb_move = [null, null, null, null, null, null, null, null];
     let pawn_queen_Wc_move = [null, null, null, null, null, null, null, null];
@@ -1878,7 +2320,7 @@ function black_king_check() {
     let pawn_queen_Wf_move = [null, null, null, null, null, null, null, null];
     let pawn_queen_Wg_move = [null, null, null, null, null, null, null, null];
     let pawn_queen_Wh_move = [null, null, null, null, null, null, null, null];
-    
+
     if (pawn_Wa.name == 'queen') { pawn_queen_Wa_move = queen_possible_move(pawn_Wa)[8]; }
     if (pawn_Wb.name == 'queen') { pawn_queen_Wb_move = queen_possible_move(pawn_Wb)[8]; }
     if (pawn_Wc.name == 'queen') { pawn_queen_Wc_move = queen_possible_move(pawn_Wc)[8]; }
@@ -1887,6 +2329,61 @@ function black_king_check() {
     if (pawn_Wf.name == 'queen') { pawn_queen_Wf_move = queen_possible_move(pawn_Wf)[8]; }
     if (pawn_Wg.name == 'queen') { pawn_queen_Wg_move = queen_possible_move(pawn_Wg)[8]; }
     if (pawn_Wh.name == 'queen') { pawn_queen_Wh_move = queen_possible_move(pawn_Wh)[8]; }
+
+    let pawn_knight_Wa_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wb_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wc_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wd_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_We_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wf_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wg_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Wh_move = [null, null, null, null, null, null, null, null];
+
+    if (pawn_Wa.name == 'knight') { pawn_knight_Wa_move = knight_possible_move(pawn_Wa); }
+    if (pawn_Wb.name == 'knight') { pawn_knight_Wb_move = knight_possible_move(pawn_Wb); }
+    if (pawn_Wc.name == 'knight') { pawn_knight_Wc_move = knight_possible_move(pawn_Wc); }
+    if (pawn_Wd.name == 'knight') { pawn_knight_Wd_move = knight_possible_move(pawn_Wd); }
+    if (pawn_We.name == 'knight') { pawn_knight_We_move = knight_possible_move(pawn_We); }
+    if (pawn_Wf.name == 'knight') { pawn_knight_Wf_move = knight_possible_move(pawn_Wf); }
+    if (pawn_Wg.name == 'knight') { pawn_knight_Wg_move = knight_possible_move(pawn_Wg); }
+    if (pawn_Wh.name == 'knight') { pawn_knight_Wh_move = knight_possible_move(pawn_Wh); }
+
+    let pawn_rook_Wa_move = [null, null, null, null];
+    let pawn_rook_Wb_move = [null, null, null, null];
+    let pawn_rook_Wc_move = [null, null, null, null];
+    let pawn_rook_Wd_move = [null, null, null, null];
+    let pawn_rook_We_move = [null, null, null, null];
+    let pawn_rook_Wf_move = [null, null, null, null];
+    let pawn_rook_Wg_move = [null, null, null, null];
+    let pawn_rook_Wh_move = [null, null, null, null];
+
+    let pawn_bishop_Wa_move = [null, null, null, null];
+    let pawn_bishop_Wb_move = [null, null, null, null];
+    let pawn_bishop_Wc_move = [null, null, null, null];
+    let pawn_bishop_Wd_move = [null, null, null, null];
+    let pawn_bishop_We_move = [null, null, null, null];
+    let pawn_bishop_Wf_move = [null, null, null, null];
+    let pawn_bishop_Wg_move = [null, null, null, null];
+    let pawn_bishop_Wh_move = [null, null, null, null];
+
+
+    if (pawn_Wa.name == 'rook') { pawn_rook_Wa_move = rook_possible_move(pawn_Wa)[4]; }
+    if (pawn_Wb.name == 'rook') { pawn_rook_Wb_move = rook_possible_move(pawn_Wb)[4]; }
+    if (pawn_Wc.name == 'rook') { pawn_rook_Wc_move = rook_possible_move(pawn_Wc)[4]; }
+    if (pawn_Wd.name == 'rook') { pawn_rook_Wd_move = rook_possible_move(pawn_Wd)[4]; }
+    if (pawn_We.name == 'rook') { pawn_rook_We_move = rook_possible_move(pawn_We)[4]; }
+    if (pawn_Wf.name == 'rook') { pawn_rook_Wf_move = rook_possible_move(pawn_Wf)[4]; }
+    if (pawn_Wg.name == 'rook') { pawn_rook_Wg_move = rook_possible_move(pawn_Wg)[4]; }
+    if (pawn_Wh.name == 'rook') { pawn_rook_Wh_move = rook_possible_move(pawn_Wh)[4]; }
+
+    if (pawn_Wa.name == 'bishop') { pawn_rook_Wa_move = bishop_possible_move(pawn_Wa)[4]; }
+    if (pawn_Wb.name == 'bishop') { pawn_rook_Wb_move = bishop_possible_move(pawn_Wb)[4]; }
+    if (pawn_Wc.name == 'bishop') { pawn_rook_Wc_move = bishop_possible_move(pawn_Wc)[4]; }
+    if (pawn_Wd.name == 'bishop') { pawn_rook_Wd_move = bishop_possible_move(pawn_Wd)[4]; }
+    if (pawn_We.name == 'bishop') { pawn_rook_We_move = bishop_possible_move(pawn_We)[4]; }
+    if (pawn_Wf.name == 'bishop') { pawn_rook_Wf_move = bishop_possible_move(pawn_Wf)[4]; }
+    if (pawn_Wg.name == 'bishop') { pawn_rook_Wg_move = bishop_possible_move(pawn_Wg)[4]; }
+    if (pawn_Wh.name == 'bishop') { pawn_rook_Wh_move = bishop_possible_move(pawn_Wh)[4]; }
 
     if (pawn_Wa_move[0] == king_Be.position || pawn_Wa_move[3] == king_Be.position) { king_check[4] = pawn_Wa.position; }
     if (pawn_Wb_move[0] == king_Be.position || pawn_Wb_move[3] == king_Be.position) { king_check[4] = pawn_Wb.position; }
@@ -1898,17 +2395,36 @@ function black_king_check() {
     if (pawn_Wh_move[0] == king_Be.position || pawn_Wh_move[3] == king_Be.position) { king_check[4] = pawn_Wh.position; }
 
     for (let i = 0; i < 4; i++) {
-        if (rock_Wa_move[i] == king_Be.position) { king_check[0] = rock_Wa.position; }
-        if (rock_Wh_move[i] == king_Be.position) { king_check[7] = rock_Wh.position; }
+        if (rook_Wa_move[i] == king_Be.position) { king_check[0] = rook_Wa.position; }
+        if (rook_Wh_move[i] == king_Be.position) { king_check[7] = rook_Wh.position; }
         if (bishop_Wc_move[i] == king_Be.position) { king_check[2] = bishop_Wc.position; }
         if (bishop_Wf_move[i] == king_Be.position) { king_check[5] = bishop_Wf.position; }
+
+        if (pawn_rook_Wa_move[i] == king_Be.position) { king_check[0] = pawn_Wa.position; }
+        if (pawn_rook_Wb_move[i] == king_Be.position) { king_check[0] = pawn_Wb.position; }
+        if (pawn_rook_Wc_move[i] == king_Be.position) { king_check[0] = pawn_Wc.position; }
+        if (pawn_rook_Wd_move[i] == king_Be.position) { king_check[0] = pawn_Wd.position; }
+        if (pawn_rook_We_move[i] == king_Be.position) { king_check[0] = pawn_We.position; }
+        if (pawn_rook_Wf_move[i] == king_Be.position) { king_check[0] = pawn_Wf.position; }
+        if (pawn_rook_Wg_move[i] == king_Be.position) { king_check[0] = pawn_Wg.position; }
+        if (pawn_rook_Wh_move[i] == king_Be.position) { king_check[0] = pawn_Wh.position; }
+
+        if (pawn_bishop_Wa_move[i] == king_Be.position) { king_check[2] = pawn_Wa.position; }
+        if (pawn_bishop_Wb_move[i] == king_Be.position) { king_check[2] = pawn_Wb.position; }
+        if (pawn_bishop_Wc_move[i] == king_Be.position) { king_check[2] = pawn_Wc.position; }
+        if (pawn_bishop_Wd_move[i] == king_Be.position) { king_check[2] = pawn_Wd.position; }
+        if (pawn_bishop_We_move[i] == king_Be.position) { king_check[2] = pawn_We.position; }
+        if (pawn_bishop_Wf_move[i] == king_Be.position) { king_check[2] = pawn_Wf.position; }
+        if (pawn_bishop_Wg_move[i] == king_Be.position) { king_check[2] = pawn_Wg.position; }
+        if (pawn_bishop_Wh_move[i] == king_Be.position) { king_check[2] = pawn_Wh.position; }
+
     }
 
     for (let i = 0; i < 8; i++) {
         if (knight_Wb_move[i] == king_Be.position) { king_check[1] = knight_Wb.position; }
         if (knight_Wg_move[i] == king_Be.position) { king_check[6] = knight_Wg.position; }
         if (queen_Wd_move[i] == king_Be.position) { king_check[3] = queen_Wd.position; }
-        
+
         if (pawn_queen_Wa_move[i] == king_Be.position) { king_check[3] = pawn_Wa.position; }
         if (pawn_queen_Wb_move[i] == king_Be.position) { king_check[3] = pawn_Wb.position; }
         if (pawn_queen_Wc_move[i] == king_Be.position) { king_check[3] = pawn_Wc.position; }
@@ -1917,6 +2433,16 @@ function black_king_check() {
         if (pawn_queen_Wf_move[i] == king_Be.position) { king_check[3] = pawn_Wf.position; }
         if (pawn_queen_Wg_move[i] == king_Be.position) { king_check[3] = pawn_Wg.position; }
         if (pawn_queen_Wh_move[i] == king_Be.position) { king_check[3] = pawn_Wh.position; }
+
+        if (pawn_knight_Wa_move[i] == king_Be.position) { king_check[1] = pawn_Wa.position; }
+        if (pawn_knight_Wb_move[i] == king_Be.position) { king_check[1] = pawn_Wb.position; }
+        if (pawn_knight_Wc_move[i] == king_Be.position) { king_check[1] = pawn_Wc.position; }
+        if (pawn_knight_Wd_move[i] == king_Be.position) { king_check[1] = pawn_Wd.position; }
+        if (pawn_knight_We_move[i] == king_Be.position) { king_check[1] = pawn_We.position; }
+        if (pawn_knight_Wf_move[i] == king_Be.position) { king_check[1] = pawn_Wf.position; }
+        if (pawn_knight_Wg_move[i] == king_Be.position) { king_check[1] = pawn_Wg.position; }
+        if (pawn_knight_Wh_move[i] == king_Be.position) { king_check[1] = pawn_Wh.position; }
+
     }
 
     let t = false;
@@ -1931,6 +2457,7 @@ function black_king_check() {
 
 function white_king_check() {
     let king_check = [null, null, null, null, null, null, null, null];
+
     let pawn_Ba_move = [null, null, null, null];
     let pawn_Bb_move = [null, null, null, null];
     let pawn_Bc_move = [null, null, null, null];
@@ -1949,21 +2476,21 @@ function white_king_check() {
     if (pawn_Bg.name == 'pawn') { pawn_Bg_move = black_pawn_possible_move(pawn_Bg); }
     if (pawn_Bh.name == 'pawn') { pawn_Bh_move = black_pawn_possible_move(pawn_Bh); }
 
-    let rock_Ba_move = [null, null, null, null];
+    let rook_Ba_move = [null, null, null, null];
     let knight_Bb_move = [null, null, null, null, null, null, null, null];
     let bishop_Bc_move = [null, null, null, null];
     let queen_Bd_move = [null, null, null, null, null, null, null, null];
     let bishop_Bf_move = [null, null, null, null];
     let knight_Bg_move = [null, null, null, null, null, null, null, null];
-    let rock_Bh_move = [null, null, null, null];
+    let rook_Bh_move = [null, null, null, null];
 
-    if (rock_Ba.name == 'rock') { rock_Ba_move = rock_possible_move(rock_Ba)[4]; }
+    if (rook_Ba.name == 'rook') { rook_Ba_move = rook_possible_move(rook_Ba)[4]; }
     if (knight_Bb.name == 'knight') { knight_Bb_move = knight_possible_move(knight_Bb); }
     if (bishop_Bc.name == 'bishop') { bishop_Bc_move = bishop_possible_move(bishop_Bc)[4]; }
     if (queen_Bd.name == 'queen') { queen_Bd_move = queen_possible_move(queen_Bd)[8]; }
     if (bishop_Bf.name == 'bishop') { bishop_Bf_move = bishop_possible_move(bishop_Bf)[4]; }
     if (knight_Bg.name == 'knight') { knight_Bg_move = knight_possible_move(knight_Bg); }
-    if (rock_Bh.name == 'rock') { rock_Bh_move = rock_possible_move(rock_Bh)[4]; }
+    if (rook_Bh.name == 'rook') { rook_Bh_move = rook_possible_move(rook_Bh)[4]; }
 
     let pawn_queen_Ba_move = [null, null, null, null, null, null, null, null];
     let pawn_queen_Bb_move = [null, null, null, null, null, null, null, null];
@@ -1973,7 +2500,7 @@ function white_king_check() {
     let pawn_queen_Bf_move = [null, null, null, null, null, null, null, null];
     let pawn_queen_Bg_move = [null, null, null, null, null, null, null, null];
     let pawn_queen_Bh_move = [null, null, null, null, null, null, null, null];
-    
+
     if (pawn_Ba.name == 'queen') { pawn_queen_Ba_move = queen_possible_move(pawn_Ba)[8]; }
     if (pawn_Bb.name == 'queen') { pawn_queen_Bb_move = queen_possible_move(pawn_Bb)[8]; }
     if (pawn_Bc.name == 'queen') { pawn_queen_Bc_move = queen_possible_move(pawn_Bc)[8]; }
@@ -1982,6 +2509,61 @@ function white_king_check() {
     if (pawn_Bf.name == 'queen') { pawn_queen_Bf_move = queen_possible_move(pawn_Bf)[8]; }
     if (pawn_Bg.name == 'queen') { pawn_queen_Bg_move = queen_possible_move(pawn_Bg)[8]; }
     if (pawn_Bh.name == 'queen') { pawn_queen_Bh_move = queen_possible_move(pawn_Bh)[8]; }
+
+    let pawn_knight_Ba_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bb_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bc_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bd_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Be_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bf_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bg_move = [null, null, null, null, null, null, null, null];
+    let pawn_knight_Bh_move = [null, null, null, null, null, null, null, null];
+
+    if (pawn_Ba.name == 'knight') { pawn_knight_Ba_move = knight_possible_move(pawn_Ba); }
+    if (pawn_Bb.name == 'knight') { pawn_knight_Bb_move = knight_possible_move(pawn_Bb); }
+    if (pawn_Bc.name == 'knight') { pawn_knight_Bc_move = knight_possible_move(pawn_Bc); }
+    if (pawn_Bd.name == 'knight') { pawn_knight_Bd_move = knight_possible_move(pawn_Bd); }
+    if (pawn_Be.name == 'knight') { pawn_knight_Be_move = knight_possible_move(pawn_Be); }
+    if (pawn_Bf.name == 'knight') { pawn_knight_Bf_move = knight_possible_move(pawn_Bf); }
+    if (pawn_Bg.name == 'knight') { pawn_knight_Bg_move = knight_possible_move(pawn_Bg); }
+    if (pawn_Bh.name == 'knight') { pawn_knight_Bh_move = knight_possible_move(pawn_Bh); }
+
+
+    let pawn_rook_Ba_move = [null, null, null, null];
+    let pawn_rook_Bb_move = [null, null, null, null];
+    let pawn_rook_Bc_move = [null, null, null, null];
+    let pawn_rook_Bd_move = [null, null, null, null];
+    let pawn_rook_Be_move = [null, null, null, null];
+    let pawn_rook_Bf_move = [null, null, null, null];
+    let pawn_rook_Bg_move = [null, null, null, null];
+    let pawn_rook_Bh_move = [null, null, null, null];
+
+    if (pawn_Ba.name == 'rook') { pawn_rook_Ba_move = rook_possible_move(pawn_Ba)[4]; }
+    if (pawn_Bb.name == 'rook') { pawn_rook_Bb_move = rook_possible_move(pawn_Bb)[4]; }
+    if (pawn_Bc.name == 'rook') { pawn_rook_Bc_move = rook_possible_move(pawn_Bc)[4]; }
+    if (pawn_Bd.name == 'rook') { pawn_rook_Bd_move = rook_possible_move(pawn_Bd)[4]; }
+    if (pawn_Be.name == 'rook') { pawn_rook_Be_move = rook_possible_move(pawn_Be)[4]; }
+    if (pawn_Bf.name == 'rook') { pawn_rook_Bf_move = rook_possible_move(pawn_Bf)[4]; }
+    if (pawn_Bg.name == 'rook') { pawn_rook_Bg_move = rook_possible_move(pawn_Bg)[4]; }
+    if (pawn_Bh.name == 'rook') { pawn_rook_Bh_move = rook_possible_move(pawn_Bh)[4]; }
+
+    let pawn_bishop_Ba_move = [null, null, null, null];
+    let pawn_bishop_Bb_move = [null, null, null, null];
+    let pawn_bishop_Bc_move = [null, null, null, null];
+    let pawn_bishop_Bd_move = [null, null, null, null];
+    let pawn_bishop_Be_move = [null, null, null, null];
+    let pawn_bishop_Bf_move = [null, null, null, null];
+    let pawn_bishop_Bg_move = [null, null, null, null];
+    let pawn_bishop_Bh_move = [null, null, null, null];
+
+    if (pawn_Ba.name == 'bishop') { pawn_bishop_Ba_move = bishop_possible_move(pawn_Ba)[4]; }
+    if (pawn_Bb.name == 'bishop') { pawn_bishop_Bb_move = bishop_possible_move(pawn_Bb)[4]; }
+    if (pawn_Bc.name == 'bishop') { pawn_bishop_Bc_move = bishop_possible_move(pawn_Bc)[4]; }
+    if (pawn_Bd.name == 'bishop') { pawn_bishop_Bd_move = bishop_possible_move(pawn_Bd)[4]; }
+    if (pawn_Be.name == 'bishop') { pawn_bishop_Be_move = bishop_possible_move(pawn_Be)[4]; }
+    if (pawn_Bf.name == 'bishop') { pawn_bishop_Bf_move = bishop_possible_move(pawn_Bf)[4]; }
+    if (pawn_Bg.name == 'bishop') { pawn_bishop_Bg_move = bishop_possible_move(pawn_Bg)[4]; }
+    if (pawn_Bh.name == 'bishop') { pawn_bishop_Bh_move = bishop_possible_move(pawn_Bh)[4]; }
 
     if (pawn_Ba_move[0] == king_We.position || pawn_Ba_move[3] == king_We.position) { king_check[4] = pawn_Ba.position; }
     if (pawn_Bb_move[0] == king_We.position || pawn_Bb_move[3] == king_We.position) { king_check[4] = pawn_Bb.position; }
@@ -1993,10 +2575,29 @@ function white_king_check() {
     if (pawn_Bh_move[0] == king_We.position || pawn_Bh_move[3] == king_We.position) { king_check[4] = pawn_Bh.position; }
 
     for (let i = 0; i < 4; i++) {
-        if (rock_Ba_move[i] == king_We.position) { king_check[0] = rock_Ba.position; }
-        if (rock_Bh_move[i] == king_We.position) { king_check[7] = rock_Bh.position; }
+        if (rook_Ba_move[i] == king_We.position) { king_check[0] = rook_Ba.position; }
+        if (rook_Bh_move[i] == king_We.position) { king_check[7] = rook_Bh.position; }
         if (bishop_Bc_move[i] == king_We.position) { king_check[2] = bishop_Bc.position; }
         if (bishop_Bf_move[i] == king_We.position) { king_check[5] = bishop_Bf.position; }
+
+        if (pawn_rook_Ba_move[i] == king_We.position) { king_check[0] = pawn_Ba.position; }
+        if (pawn_rook_Bb_move[i] == king_We.position) { king_check[0] = pawn_Bb.position; }
+        if (pawn_rook_Bc_move[i] == king_We.position) { king_check[0] = pawn_Bc.position; }
+        if (pawn_rook_Bd_move[i] == king_We.position) { king_check[0] = pawn_Bd.position; }
+        if (pawn_rook_Be_move[i] == king_We.position) { king_check[0] = pawn_Be.position; }
+        if (pawn_rook_Bf_move[i] == king_We.position) { king_check[0] = pawn_Bf.position; }
+        if (pawn_rook_Bg_move[i] == king_We.position) { king_check[0] = pawn_Bg.position; }
+        if (pawn_rook_Bh_move[i] == king_We.position) { king_check[0] = pawn_Bh.position; }
+
+        if (pawn_bishop_Ba_move[i] == king_We.position) { king_check[2] = pawn_Ba.position; }
+        if (pawn_bishop_Bb_move[i] == king_We.position) { king_check[2] = pawn_Bb.position; }
+        if (pawn_bishop_Bc_move[i] == king_We.position) { king_check[2] = pawn_Bc.position; }
+        if (pawn_bishop_Bd_move[i] == king_We.position) { king_check[2] = pawn_Bd.position; }
+        if (pawn_bishop_Be_move[i] == king_We.position) { king_check[2] = pawn_Be.position; }
+        if (pawn_bishop_Bf_move[i] == king_We.position) { king_check[2] = pawn_Bf.position; }
+        if (pawn_bishop_Bg_move[i] == king_We.position) { king_check[2] = pawn_Bg.position; }
+        if (pawn_bishop_Bh_move[i] == king_We.position) { king_check[2] = pawn_Bh.position; }
+
     }
 
     for (let i = 0; i < 8; i++) {
@@ -2012,6 +2613,15 @@ function white_king_check() {
         if (pawn_queen_Bf_move[i] == king_We.position) { king_check[3] = pawn_Bf.position; }
         if (pawn_queen_Bg_move[i] == king_We.position) { king_check[3] = pawn_Bg.position; }
         if (pawn_queen_Bh_move[i] == king_We.position) { king_check[3] = pawn_Bh.position; }
+
+        if (pawn_knight_Ba_move[i] == king_We.position) { king_check[1] = pawn_Ba.position; }
+        if (pawn_knight_Bb_move[i] == king_We.position) { king_check[1] = pawn_Bb.position; }
+        if (pawn_knight_Bc_move[i] == king_We.position) { king_check[1] = pawn_Bc.position; }
+        if (pawn_knight_Bd_move[i] == king_We.position) { king_check[1] = pawn_Bd.position; }
+        if (pawn_knight_Be_move[i] == king_We.position) { king_check[1] = pawn_Be.position; }
+        if (pawn_knight_Bf_move[i] == king_We.position) { king_check[1] = pawn_Bf.position; }
+        if (pawn_knight_Bg_move[i] == king_We.position) { king_check[1] = pawn_Bg.position; }
+        if (pawn_knight_Bh_move[i] == king_We.position) { king_check[1] = pawn_Bh.position; }
 
     }
 
@@ -2108,10 +2718,10 @@ function pawn_king_safemove(piece) {
     return pawn_king_safemove;
 }
 
-function rock_king_safemove(piece) {
+function rook_king_safemove(piece) {
     let plays = piece.player;
-    let rock_move = rock_possible_move(piece);
-    let rock_king_move = [
+    let rook_move = rook_possible_move(piece);
+    let rook_king_move = [
         [null, null, null, null, null, null, null],
         [null, null, null, null, null, null, null],
         [null, null, null, null, null, null, null],
@@ -2119,30 +2729,30 @@ function rock_king_safemove(piece) {
         [null, null, null, null]
     ];
     let piece_position = piece.position;
-    for (let i = 0; i < rock_move.length - 1; i++) {
+    for (let i = 0; i < rook_move.length - 1; i++) {
         let k = 0;
-        for (let j = 0; j < rock_move[i].length; j++) {
-            if (rock_move[i][j] == null) { break; }
-            changeplace(piece, rock_move[i][j]);
+        for (let j = 0; j < rook_move[i].length; j++) {
+            if (rook_move[i][j] == null) { break; }
+            changeplace(piece, rook_move[i][j]);
             let t;
             if (plays == 'b') { t = black_king_check()[0]; }
             if (plays == 'w') { t = white_king_check()[0]; }
             changeplace(piece, piece_position);
             piece_place(piece);
             if (!t) {
-                rock_king_move[i][k] = rock_move[i][j];
+                rook_king_move[i][k] = rook_move[i][j];
                 k++;
             }
         }
     }
     let k = 0;
-    for (let i = 0; i < rock_move[4].length; i++) {
-        if (rock_move[4][i] == null) { break; }
-        let piece2 = check_pieces(rock_move[4][i])[2];
+    for (let i = 0; i < rook_move[4].length; i++) {
+        if (rook_move[4][i] == null) { break; }
+        let piece2 = check_pieces(rook_move[4][i])[2];
         let piece2_copy = new Piece_detail(piece2.name, piece2.unicode, piece2.position, piece2.player);
 
         position_clear(piece2.position);
-        changeplace(piece, rock_move[4][i]);
+        changeplace(piece, rook_move[4][i]);
         let t;
         if (plays == 'b') { t = black_king_check()[0]; }
         if (plays == 'w') { t = white_king_check()[0]; }
@@ -2154,11 +2764,11 @@ function rock_king_safemove(piece) {
         piece2.player = piece2_copy.player;
         piece_place(piece2);
         if (!t) {
-            rock_king_move[4][k] = rock_move[4][i];
+            rook_king_move[4][k] = rook_move[4][i];
             k++;
         }
     }
-    return rock_king_move;
+    return rook_king_move;
 }
 
 function bishop_king_safemove(piece) {
@@ -2353,22 +2963,22 @@ function check_pieces(element) {
     if (element == pawn_Wg.position) { return [true, 'w', pawn_Wg]; }
     if (element == pawn_Wh.position) { return [true, 'w', pawn_Wh]; }
 
-    if (element == rock_Ba.position) { return [true, 'b', rock_Ba]; }
+    if (element == rook_Ba.position) { return [true, 'b', rook_Ba]; }
     if (element == knight_Bb.position) { return [true, 'b', knight_Bb]; }
     if (element == bishop_Bc.position) { return [true, 'b', bishop_Bc]; }
     if (element == queen_Bd.position) { return [true, 'b', queen_Bd]; }
     if (element == king_Be.position) { return [true, 'b', king_Be]; }
     if (element == bishop_Bf.position) { return [true, 'b', bishop_Bf]; }
     if (element == knight_Bg.position) { return [true, 'b', knight_Bg]; }
-    if (element == rock_Bh.position) { return [true, 'b', rock_Bh]; }
-    if (element == rock_Wa.position) { return [true, 'w', rock_Wa]; }
+    if (element == rook_Bh.position) { return [true, 'b', rook_Bh]; }
+    if (element == rook_Wa.position) { return [true, 'w', rook_Wa]; }
     if (element == knight_Wb.position) { return [true, 'w', knight_Wb]; }
     if (element == bishop_Wc.position) { return [true, 'w', bishop_Wc]; }
     if (element == queen_Wd.position) { return [true, 'w', queen_Wd]; }
     if (element == king_We.position) { return [true, 'w', king_We]; }
     if (element == bishop_Wf.position) { return [true, 'w', bishop_Wf]; }
     if (element == knight_Wg.position) { return [true, 'w', knight_Wg]; }
-    if (element == rock_Wh.position) { return [true, 'w', rock_Wh]; }
+    if (element == rook_Wh.position) { return [true, 'w', rook_Wh]; }
     var for_null = new Piece_detail(null, null, null, null);
     return false, null, for_null;
 }
@@ -2530,22 +3140,22 @@ $("#new").click(function () {
     new_clear(pawn_Wg);
     new_clear(pawn_Wh);
 
-    new_clear(rock_Ba);
+    new_clear(rook_Ba);
     new_clear(knight_Bb);
     new_clear(bishop_Bc);
     new_clear(queen_Bd);
     new_clear(king_Be);
     new_clear(bishop_Bf);
     new_clear(knight_Bg);
-    new_clear(rock_Bh);
-    new_clear(rock_Wa);
+    new_clear(rook_Bh);
+    new_clear(rook_Wa);
     new_clear(knight_Wb);
     new_clear(bishop_Wc);
     new_clear(queen_Wd);
     new_clear(king_We);
     new_clear(bishop_Wf);
     new_clear(knight_Wg);
-    new_clear(rock_Wh);
+    new_clear(rook_Wh);
 
     new_player(pawn_Ba, 'pawn', '&#9823', 'a1', 'b');
     new_player(pawn_Bb, 'pawn', '&#9823', 'b1', 'b');
@@ -2564,22 +3174,22 @@ $("#new").click(function () {
     new_player(pawn_Wg, 'pawn', '&#9817', 'g6', 'w');
     new_player(pawn_Wh, 'pawn', '&#9817', 'h6', 'w');
 
-    new_player(rock_Ba, 'rock', '&#9820', 'a0', 'b');
+    new_player(rook_Ba, 'rook', '&#9820', 'a0', 'b');
     new_player(knight_Bb, 'knight', '&#9822', 'b0', 'b');
     new_player(bishop_Bc, 'bishop', '&#9821', 'c0', 'b');
     new_player(queen_Bd, 'queen', '&#9819', 'd0', 'b');
     new_player(king_Be, 'king', '&#9818', 'e0', 'b');
     new_player(bishop_Bf, 'bishop', '&#9821', 'f0', 'b');
     new_player(knight_Bg, 'knight', '&#9822', 'g0', 'b');
-    new_player(rock_Bh, 'rock', '&#9820', 'h0', 'b');
-    new_player(rock_Wa, 'rock', '&#9814', 'a7', 'w');
+    new_player(rook_Bh, 'rook', '&#9820', 'h0', 'b');
+    new_player(rook_Wa, 'rook', '&#9814', 'a7', 'w');
     new_player(knight_Wb, 'knight', '&#9816', 'b7', 'w');
     new_player(bishop_Wc, 'bishop', '&#9815', 'c7', 'w');
     new_player(queen_Wd, 'queen', '&#9813', 'd7', 'w');
     new_player(king_We, 'king', '&#9812', 'e7', 'w');
     new_player(bishop_Wf, 'bishop', '&#9815', 'f7', 'w');
     new_player(knight_Wg, 'knight', '&#9816', 'g7', 'w');
-    new_player(rock_Wh, 'rock', '&#9814', 'h7', 'w');
+    new_player(rook_Wh, 'rook', '&#9814', 'h7', 'w');
 
     piece_place(pawn_Ba);
     piece_place(pawn_Bb);
@@ -2598,22 +3208,22 @@ $("#new").click(function () {
     piece_place(pawn_Wg);
     piece_place(pawn_Wh);
 
-    piece_place(rock_Ba);
+    piece_place(rook_Ba);
     piece_place(knight_Bb);
     piece_place(bishop_Bc);
     piece_place(queen_Bd);
     piece_place(king_Be);
     piece_place(bishop_Bf);
     piece_place(knight_Bg);
-    piece_place(rock_Bh);
-    piece_place(rock_Wa);
+    piece_place(rook_Bh);
+    piece_place(rook_Wa);
     piece_place(knight_Wb);
     piece_place(bishop_Wc);
     piece_place(queen_Wd);
     piece_place(king_We);
     piece_place(bishop_Wf);
     piece_place(knight_Wg);
-    piece_place(rock_Wh);
+    piece_place(rook_Wh);
 
     $('.ws').css('textShadow', '2px 2px 1px white');
     $('.bs').css('textShadow', '2px 2px 1px black');

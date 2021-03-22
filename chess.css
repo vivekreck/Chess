@@ -52,7 +52,6 @@
 
 #contain{
     margin-top: 76px;
-    border: solid black;
 }
 
 #col2, #col21, #col22, #col23{
@@ -160,7 +159,6 @@
 #board{
     margin-top: 40px;
     margin-left: -20px;
-    height: 100%x;
     width: 477px;
     text-align: center;
     padding: 0px;
@@ -169,6 +167,11 @@
 #game{
     background-color: black;
     height: 549px;
+}
+
+.spiece{
+    font-size: 250%;
+    width: 111px;
 }
 
 #help{
