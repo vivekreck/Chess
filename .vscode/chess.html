@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./chess.css">
+    <title>CHESS GAME</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expend-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">
+            <img id="img1" src="./whiteknightleft.png">
+            <h3 id="name">CHESS GAME</h3>
+        </a>
+        <nav>
+            <div class="nav nav-pills d-none d-sm-block" id="nav-tab">
+                <a id="link1" class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+
+                <a id="link2" class="nav-link" data-bs-toggle="tab" href="#game">Game</a>
+
+                <a id="link3" class="nav-link" data-bs-toggle="tab" href="#help">Help</a>
+            </div>
+        </nav>
+    </nav>
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+            <div id="homebg"><img id="img2" src="./chessgame.png">
+                <footer id="mst"> ~ Made By MST</footer>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="game">
+            <div id="contain" class="container-fluid">
+                <div class="row">
+                    <div id="col1" class="col-4 d-none d-md-block">
+
+                        <nav id="menu" class="navbar fixed-top navbar-expand-xxl navbar-dark">
+                            <button id="menuicon" type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#myMenu">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="myMenu">
+                                <ul class="navbar-nav">
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Theme</a>
+                                        <div class="dropdown-menu">
+                                            <a id="default" class="dropdown-item">DEFAULT</a>
+                                            <a id="theme1" class="dropdown-item">THEME1</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Custom
+                                            Background</a>
+                                        <div class="dropdown-menu">
+                                            <a id="blackbg" class="dropdown-item">BLACK</a>
+                                            <a id="whitebg" class="dropdown-item">WHITE</a>
+                                            <a id="bluebg" class="dropdown-item">BLUE</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Custom
+                                            Board</a>
+                                        <div class="dropdown-menu">
+                                            <a id="bw" class="dropdown-item">BLACK-WHITE</a>
+                                            <a id="yg" class="dropdown-item">YELLOW-YELLOWGREEN</a>
+                                            <a id="bs" class="dropdown-item">BLUE-SKYBLUE</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sound</a>
+                                        <div class="dropdown-menu">
+                                            <a id="soundon" class="dropdown-item">SOUND On</a>
+                                            <a id="soundoff" class="dropdown-item">SOUND Off</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </nav>
+
+
+                        <button id="new" type="button">New</button>
+                        <h3 id="turn"> Turn: </h3> <span id="tp">Player-1</span>
+                        <h3 id="p1">Player-1</h3>
+                        <div class="row">
+                            <div id="fw8" class="col-1 rest1"></div>
+                            <div id="fw7" class="col-1 rest1"></div>
+                            <div id="fw6" class="col-1 rest1"></div>
+                            <div id="fw5" class="col-1 rest1"></div>
+                            <div id="fw4" class="col-1 rest1"></div>
+                            <div id="fw3" class="col-1 rest1"></div>
+                            <div id="fw2" class="col-1 rest1"></div>
+                            <div id="fw1" class="col-1 rest1"></div>
+                        </div>
+                        <div class="row">
+                            <div id="sw8" class="col-1 rest1"></div>
+                            <div id="sw7" class="col-1 rest1"></div>
+                            <div id="sw6" class="col-1 rest1"></div>
+                            <div id="sw5" class="col-1 rest1"></div>
+                            <div id="sw4" class="col-1 rest1"></div>
+                            <div id="sw3" class="col-1 rest1"></div>
+                            <div id="sw2" class="col-1 rest1"></div>
+                            <div id="sw1" class="col-1 rest1"></div>
+                        </div>
+                        <h3 id="p2">Player-2</h3>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div id="fb8" class="col-1 rest2"></div>
+                                <div id="fb7" class="col-1 rest2"></div>
+                                <div id="fb6" class="col-1 rest2"></div>
+                                <div id="fb5" class="col-1 rest2"></div>
+                                <div id="fb4" class="col-1 rest2"></div>
+                                <div id="fb3" class="col-1 rest2"></div>
+                                <div id="fb2" class="col-1 rest2"></div>
+                                <div id="fb1" class="col-1 rest2"></div>
+                            </div>
+                            <div class="row">
+                                <div id="sb8" class="col-1 rest2"></div>
+                                <div id="sb7" class="col-1 rest2"></div>
+                                <div id="sb6" class="col-1 rest2"></div>
+                                <div id="sb5" class="col-1 rest2"></div>
+                                <div id="sb4" class="col-1 rest2"></div>
+                                <div id="sb3" class="col-1 rest2"></div>
+                                <div id="sb2" class="col-1 rest2"></div>
+                                <div id="sb1" class="col-1 rest2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div id="col2" class="col-5 d-none d-md-block">
+                        <div id="board">
+                            <div id="a0" class="square odd "></div>
+                            <div id="b0" class="square even ws" style="text-shadow: 2px 2px 1px white;"></div>
+                            <div id="c0" class="square odd "></div>
+                            <div id="d0" class="square even ws" style="text-shadow: 2px 2px 1px white;"></div>
+                            <div id="e0" class="square odd "></div>
+                            <div id="f0" class="square even ws" style="text-shadow: 2px 2px 1px white;"></div>
+                            <div id="g0" class="square odd "></div>
+                            <div id="h0" class="square even ws" style="text-shadow: 2px 2px 1px white;"></div>
+                            <br>
+                            <div id="a1" class="square even ws" style="text-shadow: 2px 2px 1px white;"></div>
+                            <div id="b1" class="square odd "></div>
+                            <div id="c1" class="square even ws" style="text-shadow: 2px 2px 1px white;"></div>
+                            <div id="d1" class="square odd "></div>
+                            <div id="e1" class="square even ws" style="text-shadow: 2px 2px 1px white;"></div>
+                            <div id="f1" class="square odd "></div>
+                            <div id="g1" class="square even ws" style="text-shadow: 2px 2px 1px white;"></div>
+                            <div id="h1" class="square odd "></div>
+                            <br>
+                            <div id="a2" class="square odd "></div>
+                            <div id="b2" class="square even"></div>
+                            <div id="c2" class="square odd "></div>
+                            <div id="d2" class="square even"></div>
+                            <div id="e2" class="square odd "></div>
+                            <div id="f2" class="square even"></div>
+                            <div id="g2" class="square odd "></div>
+                            <div id="h2" class="square even"></div>
+                            <br>
+                            <div id="a3" class="square even"></div>
+                            <div id="b3" class="square odd "></div>
+                            <div id="c3" class="square even"></div>
+                            <div id="d3" class="square odd "></div>
+                            <div id="e3" class="square even"></div>
+                            <div id="f3" class="square odd "></div>
+                            <div id="g3" class="square even"></div>
+                            <div id="h3" class="square odd "></div>
+                            <br>
+                            <div id="a4" class="square odd "></div>
+                            <div id="b4" class="square even"></div>
+                            <div id="c4" class="square odd "></div>
+                            <div id="d4" class="square even"></div>
+                            <div id="e4" class="square odd "></div>
+                            <div id="f4" class="square even"></div>
+                            <div id="g4" class="square odd "></div>
+                            <div id="h4" class="square even"></div>
+                            <br>
+                            <div id="a5" class="square even"></div>
+                            <div id="b5" class="square odd "></div>
+                            <div id="c5" class="square even"></div>
+                            <div id="d5" class="square odd "></div>
+                            <div id="e5" class="square even"></div>
+                            <div id="f5" class="square odd "></div>
+                            <div id="g5" class="square even"></div>
+                            <div id="h5" class="square odd "></div>
+                            <br>
+                            <div id="a6" class="square odd bs" style="text-shadow: 2px 2px 1px black;"></div>
+                            <div id="b6" class="square even"></div>
+                            <div id="c6" class="square odd bs" style="text-shadow: 2px 2px 1px black;"></div>
+                            <div id="d6" class="square even"></div>
+                            <div id="e6" class="square odd bs" style="text-shadow: 2px 2px 1px black;"></div>
+                            <div id="f6" class="square even"></div>
+                            <div id="g6" class="square odd bs" style="text-shadow: 2px 2px 1px black;"></div>
+                            <div id="h6" class="square even"></div>
+                            <br>
+                            <div id="a7" class="square even"></div>
+                            <div id="b7" class="square odd bs" style="text-shadow: 2px 2px 1px black;"></div>
+                            <div id="c7" class="square even"></div>
+                            <div id="d7" class="square odd bs" style="text-shadow: 2px 2px 1px black;"></div>
+                            <div id="e7" class="square even"></div>
+                            <div id="f7" class="square odd bs" style="text-shadow: 2px 2px 1px black;"></div>
+                            <div id="g7" class="square even"></div>
+                            <div id="h7" class="square odd bs" style="text-shadow: 2px 2px 1px black;"></div>
+                        </div>
+                    </div>
+
+                    <div id="col3" class="col-3 d-none d-xl-block"><img id="img3" src="./blackknightright.png"></div>
+                    <div id="col23" class="col-12 d-md-none" style="color: chartreuse;">
+                        <h1>Plz take larg screen.</h1>
+                    </div>
+jhgjhgh hj               </div>
+            </div>
+
+            <div class="modal" id="selection1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Select one of these:</h5>
+                        </div>
+                        <div class="modal-body">
+                            <button id="wpqueen" type="button" class="btn spiece" data-dismiss="modal">&#9813</button>
+                            <button id="wprook" type="button" class="btn spiece" data-dismiss="modal">&#9814</button>
+                            <button id="wpbishop" type="button" class="btn spiece" data-dismiss="modal">&#9815</button>
+                            <button id="wpknight" type="button" class="btn spiece" data-dismiss="modal">&#9816</button>
+                        </div>
+                        <div class="modal-footer">
+                            <h6>default : &#9813</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="selection2">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Select one of these:</h5>
+                        </div>
+                        <div class="modal-body">
+                            <button id="bpqueen" type="button" class="btn spiece" data-dismiss="modal">&#9819</button>
+                            <button id="bprook" type="button" class="btn spiece" data-dismiss="modal">&#9820</button>
+                            <button id="bpbishop" type="button" class="btn spiece" data-dismiss="modal">&#9821</button>
+                            <button id="bpknight" type="button" class="btn spiece" data-dismiss="modal">&#9822</button>
+                        </div>
+                        <div class="modal-footer">
+                            <h6>default : &#9822</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="help">
+            <div id="contain2" class="container">
+                <ul class="list-unstyled">
+                    <h3 class="heading">Chess Game</h3>
+                    <li class="media">
+                        <div class="media-body">
+                            <p class="text">
+                                Chess is a recreational and competitive board game played between two players. It is
+                                an abstract strategy
+                                game and involves no hidden information. It is played on a square chessboard with 64
+                                squares arranged in
+                                an eight-by-eight grid. At the start, each player (one controlling the white pieces, the
+                                other controlling
+                                the black pieces) controls sixteen pieces: one king, one queen, two rooks, two knights,
+                                two bishops, and
+                                eight pawns. The object of the game is to checkmate the opponent's king, whereby the
+                                king is under
+                                immediate attack (in "check") and there is no way to remove it from attack on the next
+                                move. There are
+                                also several ways a game can end in a draw.
+                            </p>
+                        </div>
+                    </li>
+
+                    <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                        data-target="#setup">
+                        <h4 class="heading"><u>Setup</u></h4>
+                    </button>
+                    <li class="media">
+                        <div class="media-body">
+                            <p class="text">
+                                The game is played on a square board of eight columns (called files, denoted a to h from
+                                left to right
+                                according to White's perspective) and eight rows (called ranks, denoted 1 to 8 from
+                                bottom to top
+                                according to White's perspective). The 64 squares alternate in color and are referred to
+                                as light and dark
+                                squares. The chessboard is placed with a light square at the right-hand corner nearest
+                                to each player.
+                                Thus, each queen starts on a square of its own color.
+                            </p>
+                        </div>
+                    </li>
+                    <div class="collapse" id="setup"><img class="img4" src="./Setup.png"></div>
+
+
+                    <li class="media">
+                        <h5 class="headingStyle">King</h5>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#bking">
+                            <h1 class="bpiece">&#9818</h1>
+                        </button>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#wking">
+                            <h1 class="wpiece">&#9812</h1>
+                        </button>
+                        <div class="media-body">
+                            <p class="text">
+                                A king moves one square in any direction. Once in every game, each king can make a
+                                special move, known as
+                                castling. Castling consists of moving the king two squares along the first rank toward a
+                                rook on the
+                                player's first rank, and then placing the rook on the last square that the king crossed.
+                                Castling is
+                                permissible if the following three conditions are met:
+                                <br> 1. neither the king nor the rook has previously moved during the game;
+                                <br>2. there are no pieces between the king and the rook;
+                                <br> 3. the king is not in check, and will not pass through or land on any square
+                                attacked by an enemy
+                                piece. <br> (Note that castling is permitted if the rook is under attack, or if the rook
+                                crosses an
+                                attacked square.)
+                            </p>
+                        </div>
+                    </li>
+                    <div class="collapse" id="bking"><img class="img5" src="./kb1.png"><img class="img5" src="./kb2.png"
+                            style="margin-left: 20%;"></div>
+                    <div class="collapse" id="wking"><img class="img5" src="./kw1.png" style="margin-top: 3%;"><img
+                            class="img5" src="./kw2.png" style="margin-left: 20%; margin-top: 3%;"></div>
+
+                    <li class="media m">
+                        <h5 class="headingStyle">Queen</h5>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#bqueen">
+                            <h1 class="bpiece">&#9819</h1>
+                        </button>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#wqueen">
+                            <h1 class="wpiece">&#9813</h1>
+                        </button>
+
+                        <div class="media-body">
+                            <p class="text">
+                                A queen combines the power of a rook and bishop and can move any number of squares along
+                                a rank, file, or
+                                diagonal, but cannot leap over other pieces.
+                            </p>
+                        </div>
+                    </li>
+                    <div class="collapse" id="bqueen">bking</div>
+                    <div class="collapse" id="wqueen">wking</div>
+
+                    <li class="media">
+                        <h5 class="headingStyle">Rook</h5>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#brook">
+                            <h1 class="bpiece">&#9820</h1>
+                        </button>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#wrook">
+                            <h1 class="wpiece">&#9814</h1>
+                        </button>
+
+                        <div class="media-body">
+                            <p class="text">
+                                A rook can move any number of squares along a rank or file, but cannot leap over other
+                                pieces. Along with
+                                the king, a rook is involved during the king's castling move.
+                            </p>
+                        </div>
+                    </li>
+                    <div class="collapse" id="brook">bking</div>
+                    <div class="collapse" id="wrook">wking</div>
+
+                    <li class="media m">
+                        <h5 class="headingStyle">Bishop</h5>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#bbishop">
+                            <h1 class="bpiece">&#9821</h1>
+                        </button>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#wbishop">
+                            <h1 class="wpiece">&#9815</h1>
+                        </button>
+
+                        <div class="media-body">
+                            <p class="text">
+                                A bishop can move any number of squares diagonally, but cannot leap over other pieces.
+                            </p>
+                        </div>
+                    </li>
+                    <div class="collapse" id="bbishop">bking</div>
+                    <div class="collapse" id="wbishop">wking</div>
+
+                    <li class="media m">
+                        <h5 class="headingStyle">Knight</h5>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#bknight">
+                            <h1 class="bpiece">&#9822</h1>
+                        </button>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#wknight">
+                            <h1 class="wpiece">&#9816</h1>
+                        </button>
+
+                        <div class="media-body">
+                            <p class="text">
+                                A knight moves to any of the closest squares that are not on the same rank, file, or
+                                diagonal. (Thus the
+                                move forms an "L"-shape: two squares vertically and one square horizontally, or two
+                                squares horizontally
+                                and one square vertically.) The knight is the only piece that can leap over other
+                                pieces.
+                            </p>
+                        </div>
+                    </li>
+                    <div class="collapse" id="bknight">bking</div>
+                    <div class="collapse" id="wknight">wking</div>
+
+                    <li class="media m">
+                        <h5 class="headingStyle">Pawn</h5>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#bpawn">
+                            <h1 class="bpiece">&#9823</h1>
+                        </button>
+                        <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                            data-target="#wpawn">
+                            <h1 class="wpiece">&#9817</h1>
+                        </button>
+
+                        <div class="media-body">
+                            <p class="text">
+                                A pawn can move forward to the unoccupied square immediately in front of it on the same
+                                file, or on its
+                                first move it can advance two squares along the same file, provided both squares are
+                                unoccupied (white
+                                dots in the diagram above); or the pawn can capture an opponent's piece on a square
+                                diagonally in front of
+                                it on an adjacent file, by moving to that square (black "x"s). When a pawn makes a
+                                two-step advance from
+                                its starting position and there is an opponent's pawn on a square next to the
+                                destination square on an
+                                adjacent file, then the opponent's pawn can capture it en passant ("in passing"), moving
+                                to the square the
+                                pawn passed over. This can be done only on the very next turn; otherwise, the right to
+                                do so is forfeited.
+                            </p>
+                        </div>
+                    </li>
+                    <div class="collapse" id="bpawn"><img class="img5" src="./pb1.png"
+                            style="margin-top: 3%; margin-left: 1%;"><img class="img5" src="./pb2.png"
+                            style="margin-top: 3%; margin-left: 1%;"><img class="img5" src="./pb3.png"
+                            style="margin-top: 3%; margin-left: 1%;"></div>
+                    <div class="collapse" id="wpawn"><img class="img5" src="./pw1.png"
+                            style="margin-top: 3%; margin-left: 1%;"><img class="img5" src="./pw2.png"
+                            style="margin-top: 3%; margin-left: 1%;"><img class="img5" src="./pw3.png"
+                            style="margin-top: 3%; margin-left: 1%;"></div>
+
+                    <button type="button" style="margin-left: -10px;" class="btn" data-toggle="collapse"
+                        data-target="#check">
+                        <h4 class="heading"><u>Check</u></h4>
+                    </button>
+                    <li class="media">
+                        <div class="media-body">
+                            <p class="text">
+                                When a king is under immediate attack by one or two of the opponent's pieces, it is said
+                                to be in check. A
+                                move in response to a check is legal only if it results in a position where the king is
+                                no longer in
+                                check. This can involve capturing the checking piece; interposing a piece between the
+                                checking piece and
+                                the king (which is possible only if the attacking piece is a queen, rook, or bishop and
+                                there is a square
+                                between it and the king); or moving the king to a square where it is not under attack.
+                                Castling is not a
+                                permissible response to a check.
+                                The object of the game is to checkmate the opponent; this occurs when the opponent's
+                                king is in check, and
+                                there is no legal way to remove it from attack. It is never legal for a player to make a
+                                move that puts or
+                                leaves the player's own king in check. In casual games, it is common to announce "check"
+                                when putting the
+                                opponent's king in check, but this is not required by the rules of chess and is not
+                                usually done in
+                                tournaments.
+                            </p>
+                        </div>
+                    </li>
+                    <div class="collapse" id="check"><img class="img4" src="./check1.png"></div>
+
+                    <footer style="margin-left: 80%;">~ Source WIKIPEDIA</footer>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./jQeury_source_code.js"></script>
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap.min2.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="./chess.js"></script>
+</body>
+
+</html>
